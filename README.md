@@ -9,7 +9,7 @@ Quick start
 * include the plugin's TypoScript definitions to your own one's (located in, for example, `Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2`, with:
 
 ```
-include: include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/NodeTypes.ts2
+include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/NodeTypes.ts2
 ```
 
 * include the plugin's Stylesheet to your own one's where you add other stylesheets of the site.
