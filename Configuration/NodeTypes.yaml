@@ -1,0 +1,49 @@
+'Lelesys.Plugin.NodeTypes:MultiContent':
+  superTypes: ['TYPO3.Neos.NodeTypes:ContentObject']
+  ui:
+    label: 'Lelesys MultiContent'
+    group: 'Plugins'
+    inlineEditable: TRUE
+    icon:
+      light: 'Images/Icons/White/columns_icon-16.png'
+      dark: 'Images/Icons/Black/columns_icon-16.png'
+    inspector:
+      groups:
+        structure:
+          label: 'Structures'
+          priority: 30
+  childNodes:
+    column1:
+      type: 'TYPO3.Neos.NodeTypes:Section'
+    column2:
+      type: 'TYPO3.Neos.NodeTypes:Section'
+    column3:
+      type: 'TYPO3.Neos.NodeTypes:Section'
+    column4:
+      type: 'TYPO3.Neos.NodeTypes:Section'
+    column5:
+      type: 'TYPO3.Neos.NodeTypes:Section'
+  properties:
+    layoutList:
+      type: string
+      defaultValue: 'Structure50-50'
+      ui:
+        label: 'Select Structure'
+        inspector:
+          group: 'structure'
+          editor: T3.Content.UI.Editor.Selectbox
+          editorOptions:
+            values:
+              'Structure50-50':
+                label: 'Structure50-50'
+              'Structure65-35':
+                label: 'Structure65-35'
+              'Structure35-65':
+                label: 'Structure35-65'
+              'Structure33-33-33':
+                label: 'Structure33-33-33'
+              'Structure25-25-25-25':
+                label: 'Structure25-25-25-25'
+              'Structure20-20-20-20-20':
+                label: 'Structure20-20-20-20-20'
+        reloadIfChanged: TRUE

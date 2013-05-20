@@ -1,0 +1,31 @@
+# MultiContent
+prototype(Lelesys.Plugin.NodeTypes:MultiContent) < prototype(TYPO3.TypoScript:Template)
+prototype(Lelesys.Plugin.NodeTypes:MultiContent) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/MultiContent.html'
+	layoutList = ${q(node).property('layoutList')}
+	columnContent1 = TYPO3.Neos.NodeTypes:Section
+	columnContent1 {
+		nodePath = 'column1'
+		collection = ${q(node).children()}
+	}
+	columnContent2 = TYPO3.Neos.NodeTypes:Section
+	columnContent2 {
+		nodePath = 'column2'
+		collection = ${q(node).children()}
+	}
+	columnContent3 = TYPO3.Neos.NodeTypes:Section
+	columnContent3 {
+		nodePath = 'column3'
+		collection = ${q(node).children()}
+	}
+	columnContent4 = TYPO3.Neos.NodeTypes:Section
+	columnContent4 {
+		nodePath = 'column4'
+		collection = ${q(node).children()}
+	}
+	columnContent5 = TYPO3.Neos.NodeTypes:Section
+	columnContent5 {
+		nodePath = 'column5'
+		collection = ${q(node).children()}
+	}
+}

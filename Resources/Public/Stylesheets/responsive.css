@@ -1,0 +1,71 @@
+/*
+* Responsive structure for the plugin MultiContent
+*/
+
+/* Table of Contents
+==================================================
+
+	#Mobile - 240px
+	#Mobile - 320px
+	#Mobile - 480px
+	#Tablet - 768px
+*/
+
+
+/* #Mobile - 240px
+================================================== */
+
+@media only screen and (max-width: 319px) {
+
+	.percent-one-half,
+	.percent-one-third,
+	.percent-two-third,
+	.percent-one-fourth,
+	.percent-one-fifth,
+	.percent-big-half {
+		width: 100%;
+	}
+
+}
+
+
+/*  #Mobile - 320px
+================================================== */
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+
+	.percent-one-half,
+	.percent-one-third,
+	.percent-two-third,
+	.percent-one-fourth,
+	.percent-one-fifth,
+	.percent-big-half {
+		width: 100%;
+	}
+
+}
+
+
+/* #Mobile - 480px
+================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+	.percent-one-half,
+	.percent-one-third,
+	.percent-two-third,
+	.percent-one-fourth,
+	.percent-one-fifth,
+	.percent-big-half {
+		width: 100%;
+	}
+
+}
+
+
+/* #Tablet - 768px
+================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}

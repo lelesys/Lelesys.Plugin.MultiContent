@@ -1,0 +1,27 @@
+/*
+* Css for rendering layout
+*/
+
+.percent-one-half { width: 48%; }
+.percent-one-third { width: 30.66%; }
+.percent-two-third { width: 63.34%; }
+.percent-one-fourth { width: 22%; }
+.percent-one-fifth { width: 16.8%; }
+.percent-big-half { width: 32.66%; }
+
+.percent-one-half,
+.percent-one-third,
+.percent-two-third,
+.percent-one-fourth,
+.percent-one-fifth,
+.percent-big-half {
+	margin-right: 4%;
+	float: left;
+}
+
+.column-last {
+	margin-right: 0!important;
+	clear: right;
+}
+
+
