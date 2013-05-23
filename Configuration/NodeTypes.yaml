@@ -47,3 +47,41 @@
               'Structure20-20-20-20-20':
                 label: 'Structure20-20-20-20-20'
         reloadIfChanged: TRUE
+
+'Lelesys.Plugin.NodeTypes:MultiContentTab':
+  superTypes: ['TYPO3.Neos.NodeTypes:ContentObject']
+  ui:
+    label: 'Lelesys Tab Structure'
+    group: 'Plugins'
+    inlineEditable: TRUE
+    icon:
+      light: 'Images/Icons/White/columns_icon-16.png'
+      dark: 'Images/Icons/Black/columns_icon-16.png'
+  childNodes:
+    tabs:
+      type: 'TYPO3.Neos.NodeTypes:Section'
+
+'Lelesys.Plugin.NodeTypes:MultiContentTabItem':
+  superTypes: ['TYPO3.Neos.NodeTypes:ContentObject']
+  ui:
+    label: 'Lelesys Tab Item'
+    group: 'Plugins'
+    inlineEditable: TRUE
+    icon:
+      light: 'Images/Icons/White/columns_icon-16.png'
+      dark: 'Images/Icons/Black/columns_icon-16.png'
+    inspector:
+      groups:
+        tabitem:
+          label: 'Tab Item Name'
+          priority: 2
+  childNodes:
+    tabcontent:
+      type: 'TYPO3.Neos.NodeTypes:Section'
+  properties:
+    title:
+      type: string
+      ui:
+        label: 'Tab Title'
+        inspector:
+          group: 'tabitem'

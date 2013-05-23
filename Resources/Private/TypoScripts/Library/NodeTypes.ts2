@@ -29,3 +29,29 @@ prototype(Lelesys.Plugin.NodeTypes:MultiContent) {
 		collection = ${q(node).children()}
 	}
 }
+
+prototype(Lelesys.Plugin.NodeTypes:MultiContentTab) < prototype(Template)
+prototype(Lelesys.Plugin.NodeTypes:MultiContentTab) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/TabStructure.html'
+	tabsCollection = ${q(node).children('tabs').children()}
+	tabItemCollection = TYPO3.Neos.NodeTypes:Section
+	tabItemCollection {
+		nodePath = 'tabs'
+		collection = ${q(node).children()}
+	}
+	tabsToRender = TYPO3.Neos.NodeTypes:Section
+	tabsToRender {
+		nodePath = 'tabs'
+	}
+}
+
+prototype(Lelesys.Plugin.NodeTypes:MultiContentTabItem) < prototype(TYPO3.TypoScript:Template)
+prototype(Lelesys.Plugin.NodeTypes:MultiContentTabItem) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/TabItem.html'
+	tabContainerNode = ${q(node).property('_parent.parent')}
+	contentContainer = TYPO3.Neos.NodeTypes:Section
+	contentContainer {
+		nodePath = 'tabcontent'
+		collection = ${q(node).children()}
+	}
+}

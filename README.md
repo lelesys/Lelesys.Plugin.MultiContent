@@ -20,3 +20,28 @@ include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/Node
 ```
 
 * add the plugin content element "Lelesys MultiContent" to the position of your choice.
+
+Steps to add tab structure
+------------
+
+* include the plugin's TypoScript definitions to your own one's (located in, for example, `Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2`, with:
+
+```
+include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/NodeTypes.ts2
+```
+
+* include the plugin's Stylesheet to your own one's where you add other stylesheets of the site.
+
+```
+<link href="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/Stylesheets/tabs.css')}" rel="stylesheet" media="screen">
+```
+
+* include the plugin's Javascript to your own one's where you add other javascript files of the site.
+
+```
+<script src="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/JavaScript/tabs.js')}"></script>
+```
+
+* add the plugin content element "Lelesys Tab Structure" to the position of your choice and inside that
+plugin add as many "Lelesys Tab Item" plugin as you want with "Text", "Image", "Text with Image" or any
+other content elements.

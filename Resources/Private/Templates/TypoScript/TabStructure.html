@@ -1,0 +1,23 @@
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace t=TYPO3\Neos\ViewHelpers}
+<t:contentElement node="{node}">
+	<f:if condition="{tabsCollection}">
+		<f:then>
+			<div class="tabs-wrapper">
+				<ul class="tabs">
+					<f:for each="{tabsCollection}" as="tab">
+						<li><a href="#{node.name}-{tab.index}">{tab.properties.title}</a></li>
+					</f:for>
+				</ul>
+				<div class="tabs-container">
+					<ts:renderTypoScript path="tabItemCollection" />
+				</div>
+			</div>
+		</f:then>
+		<f:else>
+			<div>&nbsp;</div>
+			<ts:renderTypoScript path="tabsToRender" />
+		</f:else>
+	</f:if>
+	<div>&nbsp;</div>
+</t:contentElement>
