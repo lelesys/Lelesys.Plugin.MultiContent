@@ -10,13 +10,13 @@
 					</f:for>
 				</ul>
 				<div class="tabs-container">
-					<ts:renderTypoScript path="tabItemCollection" />
+					<ts:render path="tabItemCollection" />
 				</div>
 			</div>
 		</f:then>
 		<f:else>
 			<div>&nbsp;</div>
-			<ts:renderTypoScript path="tabsToRender" />
+			<ts:render path="tabsToRender" />
 		</f:else>
 	</f:if>
 	<div>&nbsp;</div>
