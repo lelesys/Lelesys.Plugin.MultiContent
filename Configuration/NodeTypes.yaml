@@ -1,4 +1,3 @@
-
 'Lelesys.Plugin.NodeTypes:MultiContent':
   superTypes:
     - 'TYPO3.Neos:Content'
@@ -33,7 +32,7 @@
         label: 'Select Structure'
         inspector:
           group: structure
-          editor: T3.Content.UI.Editor.Selectbox
+          editor: Content/Inspector/Editors/SelectBoxEditor
           editorOptions:
             values:
               Structure50-50:
@@ -49,19 +48,21 @@
               Structure20-20-20-20-20:
                 label: Structure20-20-20-20-20
         reloadIfChanged: true
+
 'Lelesys.Plugin.NodeTypes:MultiContentTab':
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:
-    label: 'Lelesys Tab Structure'
     group: Plugins
-    inlineEditable: true
+    label: 'Lelesys Tab Structure'
     icon:
       light: Images/Icons/White/columns_icon-16.png
       dark: Images/Icons/Black/columns_icon-16.png
+    inlineEditable: true
   childNodes:
     tabs:
       type: 'TYPO3.Neos:ContentCollection'
+
 'Lelesys.Plugin.NodeTypes:MultiContentTabItem':
   superTypes:
     - 'TYPO3.Neos:Content'
@@ -87,3 +88,30 @@
         label: 'Tab Title'
         inspector:
           group: tabitem
+
+'Lelesys.Plugin.NodeTypes:MultiContentToggle':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Lelesys Toggle Structure'
+    group: Plugins
+    icon:
+      light: 'Images/Icons/White/columns_icon-16.png'
+      dark: 'Images/Icons/Black/columns_icon-16.png'
+  childNodes:
+    toggle:
+      type: 'TYPO3.Neos:ContentCollection'
+
+'Lelesys.Plugin.NodeTypes:MultiContentToggleItem':
+  superTypes:
+    - 'TYPO3.Neos.NodeTypes:Text'
+  ui:
+    label: 'Lelesys Toggle Item'
+    group: Plugins
+    icon:
+      light: 'Images/Icons/White/columns_icon-16.png'
+      dark: 'Images/Icons/Black/columns_icon-16.png'
+  properties:
+    title:
+      type: string
+      defaultValue: 'Enter title here'

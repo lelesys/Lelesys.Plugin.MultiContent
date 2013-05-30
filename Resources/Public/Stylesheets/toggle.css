@@ -1,0 +1,78 @@
+/*
+* css for rendering toggle structure
+*/
+
+#toggle-view {
+	list-style:none;
+	font-size:12px;
+	margin:0;
+	padding:0;
+	width:100%;
+	margin-bottom:4px;
+}
+
+#toggle-view li {
+	margin-bottom:1px;
+	border-bottom: 1px dotted;
+	position:relative;
+}
+
+#toggle-view li:hover {
+
+}
+
+#toggle-view h5 {
+	margin:0;
+	font-size:13px;
+	cursor:pointer;
+	padding: 12px 10px 12px 34px;
+}
+
+#toggle-view h5:hover, #toggle-view h5:active {
+	color:#444;
+}
+
+#toggle-view span {
+	position:absolute;
+	left:0;
+	top:12px;
+}
+
+#toggle-view .panel {
+	display:none;
+	background:#fff;
+	overflow:hidden;
+	padding:10px 0 20px 0;
+}
+
+#toggle-view .panel p:last-child {
+	margin-bottom:0;
+}
+
+#toggle-view li.activated h5 {
+	color:#ffb141;
+}
+
+.toggle-plus {
+	background-image: url('../Images/glyphicons-halflings.png');
+	background-position: 0 -92px;
+	background-repeat: no-repeat;
+	float: left;
+	height: 18px;
+	width: 22px;
+}
+
+.toggle-minus {
+	background-image: url('../Images/glyphicons-halflings.png');
+	background-position: -24px -92px;
+	background-repeat: no-repeat;
+	float: left;
+	height: 18px;
+	width: 22px;
+}
+
+.backend-plus {
+	position: relative !important;
+	left: 0px;
+	top: 0px;
+}

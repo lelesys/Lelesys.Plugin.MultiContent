@@ -55,3 +55,24 @@ prototype(Lelesys.Plugin.NodeTypes:MultiContentTabItem) {
 		collection = ${q(node).children()}
 	}
 }
+
+prototype(Lelesys.Plugin.NodeTypes:MultiContentToggle) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.NodeTypes:MultiContentToggle) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/ToggleStructure.html'
+	toggleCollection = ${q(node).children('toggle').children()}
+	toggleItemCollection = TYPO3.Neos:ContentCollection
+	toggleItemCollection {
+		nodePath = 'toggle'
+		collection = ${q(node).children()}
+	}
+	toggleToRender = TYPO3.Neos:ContentCollection
+	toggleToRender {
+		nodePath = 'toggle'
+	}
+}
+
+prototype(Lelesys.Plugin.NodeTypes:MultiContentToggleItem) < prototype(TYPO3.Neos.NodeTypes:Text)
+prototype(Lelesys.Plugin.NodeTypes:MultiContentToggleItem) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/ToggleItem.html'
+	title = ${q(node).property('title')}
+}

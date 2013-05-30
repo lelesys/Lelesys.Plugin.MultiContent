@@ -1,0 +1,24 @@
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<f:security.ifAccess resource="TYPO3_Neos_Backend_BackendController">
+	<f:then>
+		<neos:contentElement node="{node}">
+			<div>
+				<span class="toggle-plus backend-plus"></span>
+				<h5><neos:contentElement.editable property="title">{title -> f:format.raw()}</neos:contentElement.editable></h5>
+				<div>
+					<neos:contentElement.editable property="text">{text -> f:format.raw()}</neos:contentElement.editable>
+				</div>
+			</div>
+		</neos:contentElement>
+	</f:then>
+	<f:else>
+		<li>
+			<h5>{title}</h5>
+			<span class="toggle-plus"></span>
+			<div class="panel">
+				{text -> f:format.raw()}
+			</div>
+		</li>
+	</f:else>
+</f:security.ifAccess>

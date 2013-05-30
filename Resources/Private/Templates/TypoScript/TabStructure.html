@@ -1,6 +1,6 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
-{namespace t=TYPO3\Neos\ViewHelpers}
-<t:contentElement node="{node}">
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<neos:contentElement node="{node}">
 	<f:if condition="{tabsCollection}">
 		<f:then>
 			<div class="tabs-wrapper">
@@ -20,4 +20,4 @@
 		</f:else>
 	</f:if>
 	<div>&nbsp;</div>
-</t:contentElement>
+</neos:contentElement>
