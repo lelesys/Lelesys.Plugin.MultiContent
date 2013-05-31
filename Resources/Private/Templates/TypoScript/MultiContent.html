@@ -1,6 +1,6 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
-{namespace t=TYPO3\Neos\ViewHelpers}
-<t:contentElement node="{node}">
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<neos:contentElement node="{node}">
 	<f:if condition="{layoutList} == 'Structure50-50'">
 		<f:then>
 			<div class="percent-one-half"><ts:render path="columnContent1" /></div>
@@ -49,4 +49,4 @@
 			<div class="clearfix"></div>
 		</f:then>
 	</f:if>
-</t:contentElement>
+</neos:contentElement>

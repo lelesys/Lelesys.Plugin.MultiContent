@@ -4,15 +4,11 @@
 
 #toggle-view {
 	list-style:none;
-	font-size:12px;
 	margin:0;
 	padding:0;
-	width:100%;
-	margin-bottom:4px;
 }
 
 #toggle-view li {
-	margin-bottom:1px;
 	border-bottom: 1px dotted;
 	position:relative;
 }
@@ -22,27 +18,21 @@
 }
 
 #toggle-view h5 {
-	margin:0;
-	font-size:13px;
 	cursor:pointer;
-	padding: 12px 10px 12px 34px;
-}
-
-#toggle-view h5:hover, #toggle-view h5:active {
-	color:#444;
+	padding: 0px 10px 0px 23px;
 }
 
 #toggle-view span {
 	position:absolute;
 	left:0;
-	top:12px;
+	top:0px;
 }
 
 #toggle-view .panel {
 	display:none;
 	background:#fff;
 	overflow:hidden;
-	padding:10px 0 20px 0;
+	margin-bottom: 10px;
 }
 
 #toggle-view .panel p:last-child {

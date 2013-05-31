@@ -30,7 +30,7 @@ prototype(Lelesys.Plugin.NodeTypes:MultiContent) {
 	}
 }
 
-prototype(Lelesys.Plugin.NodeTypes:MultiContentTab) < prototype(Template)
+prototype(Lelesys.Plugin.NodeTypes:MultiContentTab) < prototype(TYPO3.Neos:Template)
 prototype(Lelesys.Plugin.NodeTypes:MultiContentTab) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/TabStructure.html'
 	tabsCollection = ${q(node).children('tabs').children()}
