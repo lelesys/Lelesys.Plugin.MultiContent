@@ -76,3 +76,29 @@ prototype(Lelesys.Plugin.NodeTypes:MultiContentToggleItem) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/ToggleItem.html'
 	title = ${q(node).property('title')}
 }
+
+# Definition of custom TypoScript types
+
+# Override template path for multi-column layout
+prototype(TYPO3.Neos.NodeTypes:MultiColumn) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/MultiColumn.html'
+	columns.iterationName = 'columIterator'
+}
+# reload - Two Column TS Object
+prototype(TYPO3.Neos.NodeTypes:TwoColumn) < prototype(TYPO3.Neos.NodeTypes:MultiColumn)
+
+# reload - Three Column TS Object
+prototype(TYPO3.Neos.NodeTypes:ThreeColumn) < prototype(TYPO3.Neos.NodeTypes:MultiColumn)
+
+# reload - Four Column TS Object
+prototype(TYPO3.Neos.NodeTypes:FourColumn) < prototype(TYPO3.Neos.NodeTypes:MultiColumn)
+
+# Override template path and add additional variable
+prototype(TYPO3.Neos.NodeTypes:MultiColumnItem) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/MultiColumnItem.html'
+	columnSpan = Lelesys.Plugin.MultiContent:GridCalculator
+}
+
+prototype(Lelesys.Plugin.MultiContent:GridCalculator) {
+	@class = 'Lelesys\\Plugin\\MultiContent\\TypoScript\\GridCalculator'
+}
