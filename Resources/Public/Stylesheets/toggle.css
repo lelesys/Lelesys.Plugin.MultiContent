@@ -2,45 +2,39 @@
 * css for rendering toggle structure
 */
 
-#toggle-view {
+.toggle-view {
 	list-style:none;
 	margin:0;
 	padding:0;
 }
 
-#toggle-view li {
-	border-bottom: 1px dotted;
+.toggle-view li {
 	position:relative;
 }
 
-#toggle-view li:hover {
+.toggle-view li:hover {
 
 }
 
-#toggle-view h5 {
+.toggle-view h5 {
 	cursor:pointer;
 	padding: 0px 10px 0px 23px;
 }
 
-#toggle-view span {
+.toggle-view span {
 	position:absolute;
 	left:0;
 	top:0px;
 }
 
-#toggle-view .panel {
+.toggle-view .panel {
 	display:none;
-	background:#fff;
 	overflow:hidden;
 	margin-bottom: 10px;
 }
 
-#toggle-view .panel p:last-child {
+.toggle-view .panel p:last-child {
 	margin-bottom:0;
-}
-
-#toggle-view li.activated h5 {
-	color:#ffb141;
 }
 
 .toggle-plus {

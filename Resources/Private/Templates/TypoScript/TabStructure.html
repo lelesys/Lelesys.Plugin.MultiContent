@@ -4,7 +4,7 @@
 	<f:if condition="{tabsCollection}">
 		<f:then>
 			<div class="tabs-wrapper">
-				<ul class="tabs">
+				<ul class="tabs nav nav-tabs">
 					<f:for each="{tabsCollection}" as="tab">
 						<li><a href="#{node.name}-{tab.index}">{tab.properties.title}</a></li>
 					</f:for>
