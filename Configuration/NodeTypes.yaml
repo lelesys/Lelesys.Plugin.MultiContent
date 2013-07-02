@@ -47,6 +47,10 @@
                 label: Structure25-25-25-25
               Structure20-20-20-20-20:
                 label: Structure20-20-20-20-20
+              Divider:
+                label: Horizontal Divider
+              Spacer:
+                label: Spacer
         reloadIfChanged: true
 
 'Lelesys.Plugin.NodeTypes:MultiContentTab':
