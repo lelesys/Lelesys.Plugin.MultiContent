@@ -1,0 +1,45 @@
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<neos:contentElement node="{node}">
+	<f:security.ifAccess resource="TYPO3_Neos_Backend_BackendController">
+		<f:then>
+			<f:if condition="{slidesCollection}">
+				<f:then>
+					<div>
+						<div>
+							<ul>
+								<ts:render path="slideItemCollection" />
+							</ul>
+						</div>
+					</div>
+				</f:then>
+				<f:else>
+					<div>&nbsp;</div>
+					<ts:render path="slidesToRender" />
+				</f:else>
+			</f:if>
+			<div>&nbsp;</div>
+		</f:then>
+		<f:else>
+			<f:if condition="{slidesCollection}">
+				<f:then>
+					<div class="multi-slider clearfix">
+						<div class="viewport span11 collapse">
+							<a class="buttons prev badge badge-inverse pull-left" href="#"><<</a>
+							<ul class="overview unstyled">
+								<ts:render path="slideItemCollection" />
+							</ul>
+							<a class="buttons next badge badge-inverse pull-right" href="#">>></a>
+						</div>
+						<span class="properties hide" data-type=<f:format.json>{properties}</f:format.json>></span>
+					</div>
+				</f:then>
+				<f:else>
+					<div>&nbsp;</div>
+					<ts:render path="slidesToRender" />
+				</f:else>
+			</f:if>
+			<div>&nbsp;</div>
+		</f:else>
+	</f:security.ifAccess>
+</neos:contentElement>

@@ -115,3 +115,86 @@
     title:
       type: string
       defaultValue: 'Enter title here'
+
+'Lelesys.Plugin.NodeTypes:MultiContentSlide':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    group: Plugins
+    label: 'Lelesys Slider Structure'
+    icon:
+      light: Images/Icons/White/columns_icon-16.png
+      dark: Images/Icons/Black/columns_icon-16.png
+    inlineEditable: true
+    inspector:
+      groups:
+        sliderconfiguration:
+          label: 'Slider cofiguration'
+          priority: 2
+  childNodes:
+    slides:
+      type: 'TYPO3.Neos:ContentCollection'
+  properties:
+    start:
+      type: string
+      defaultValue: '1'
+      ui:
+        label: 'Start point: where should the carousel start?'
+        inspector:
+          group: sliderconfiguration
+    display:
+      type: string
+      defaultValue: '1'
+      ui:
+        label: 'Display: how many blocks do you want to move at a time?'
+        inspector:
+          group: sliderconfiguration
+    controls:
+      type: boolean
+      defaultValue: 1
+      ui:
+        label: 'Controls: show navigation buttons?'
+        inspector:
+          group: sliderconfiguration
+    animation:
+      type: boolean
+      defaultValue: 1
+      ui:
+        label: 'Animation: false is instant, true is animate.'
+        inspector:
+          group: sliderconfiguration
+    duration:
+      type: string
+      defaultValue: '1000'
+      ui:
+        label: 'Duration: how fast must the animation move in milliseconds?'
+        inspector:
+          group: sliderconfiguration
+    interval:
+      type: boolean
+      defaultValue: 0
+      ui:
+        label: 'Auto slide: enable auto slide?'
+        inspector:
+          group: sliderconfiguration
+    intervaltime:
+      type: string
+      defaultValue: '3000'
+      ui:
+        label: 'Auto slide interval: time in milliseconds.'
+        inspector:
+          group: sliderconfiguration
+
+'Lelesys.Plugin.NodeTypes:MultiContentSlideItem':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Lelesys Slider Item'
+    group: Plugins
+    inlineEditable: true
+    icon:
+      light: Images/Icons/White/columns_icon-16.png
+      dark: Images/Icons/Black/columns_icon-16.png
+  childNodes:
+    slidecontent:
+      type: 'TYPO3.Neos:ContentCollection'

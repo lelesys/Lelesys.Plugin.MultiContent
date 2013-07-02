@@ -1,0 +1,21 @@
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<f:security.ifAccess resource="TYPO3_Neos_Backend_BackendController">
+	<f:then>
+		<neos:contentElement node="{node}">
+			<li>
+				<div class="well">
+					<div>&nbsp;</div>
+					<ts:render path="contentContainer" />
+				</div>
+			</li>
+		</neos:contentElement>
+	</f:then>
+	<f:else>
+		<li class="well pull-left">
+			<div class="span12">
+				<ts:render path="contentContainer" />
+			</div>
+		</li>
+	</f:else>
+</f:security.ifAccess>

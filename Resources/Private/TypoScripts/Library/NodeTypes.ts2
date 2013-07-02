@@ -102,3 +102,30 @@ prototype(TYPO3.Neos.NodeTypes:MultiColumnItem) {
 prototype(Lelesys.Plugin.MultiContent:GridCalculator) {
 	@class = 'Lelesys\\Plugin\\MultiContent\\TypoScript\\GridCalculator'
 }
+
+prototype(Lelesys.Plugin.NodeTypes:MultiContentSlide) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.NodeTypes:MultiContentSlide) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/SlideStructure.html'
+	slidesCollection = ${q(node).children('slides').children()}
+	slideItemCollection = TYPO3.Neos:ContentCollection
+	slideItemCollection {
+		nodePath = 'slides'
+		collection = ${q(node).children()}
+	}
+	slidesToRender = TYPO3.Neos:ContentCollection
+	slidesToRender {
+		nodePath = 'slides'
+	}
+	properties = ${node.properties}
+}
+
+prototype(Lelesys.Plugin.NodeTypes:MultiContentSlideItem) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.NodeTypes:MultiContentSlideItem) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/SlideItem.html'
+	SlideContainerNode = ${q(node).property('_parent.parent')}
+	contentContainer = TYPO3.Neos:ContentCollection
+	contentContainer {
+		nodePath = 'slidecontent'
+		collection = ${q(node).children()}
+	}
+}
