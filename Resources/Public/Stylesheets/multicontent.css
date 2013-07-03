@@ -82,22 +82,9 @@
 .multi-slider .overview {position: absolute;left: 0 ;top: 0;}
 /**********end of css for slider*************/
 
-
-/***********css for rendering horizontal divider structure*************/
-.separator {
-    background: none repeat scroll 0 0 #EFEFEF;
-    clear: both;
-    height: 1px;
-    margin: 40px 0;
-    width: 100%;
-	margin: 30px 0;
-}
-/******end of css for horizontal divider**************/
-
 /***********css for rendering spacer structure*************/
-.space {
-    clear: both;
-    height: 30px;
-    width: 100%;
+.well-large {
+    border-radius: 6px 6px 6px 6px;
+    padding: 24px;
 }
 /******end of css for spacer**************/
