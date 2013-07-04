@@ -17,7 +17,7 @@ $('.toggle-view li').click(function() {
 $('.multi-slider').each(function() {
 	var view_port_width = $(this).find('.viewport').width();
 	var padding_left = $(this).find('.viewport li').css('padding-left');
-	var padding_right = $(this).find('.viewport li').css('padding-left');
+	var padding_right = $(this).find('.viewport li').css('padding-right');
 	var width = view_port_width - (parseInt(padding_left) + parseInt(padding_right));
 	$(this).find('.viewport li').width(width);
 	var properties = $.parseJSON($(this).find('span.properties').attr('data-type'));
