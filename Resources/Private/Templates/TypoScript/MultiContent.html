@@ -22,6 +22,20 @@
 			<div class="clearfix"></div>
 		</f:then>
 	</f:if>
+	<f:if condition="{layoutList} == 'Structure75-25'">
+		<f:then>
+			<div class="percent-big-first"><ts:render path="columnContent1" /></div>
+			<div class="percent-small-first column-last"><ts:render path="columnContent2" /></div>
+			<div class="clearfix"></div>
+		</f:then>
+	</f:if>
+	<f:if condition="{layoutList} == 'Structure25-75'">
+		<f:then>
+			<div class="percent-small-first"><ts:render path="columnContent1" /></div>
+			<div class="percent-big-first column-last"><ts:render path="columnContent2" /></div>
+			<div class="clearfix"></div>
+		</f:then>
+	</f:if>
 	<f:if condition="{layoutList} == 'Structure33-33-33'">
 		<f:then>
 			<div class="percent-one-third"><ts:render path="columnContent1" /></div>
@@ -47,16 +61,6 @@
 			<div class="percent-one-fifth"><ts:render path="columnContent4" /></div>
 			<div class="percent-one-fifth column-last"><ts:render path="columnContent5" /></div>
 			<div class="clearfix"></div>
-		</f:then>
-	</f:if>
-	<f:if condition="{layoutList} == 'Divider'">
-		<f:then>
-			<hr/>
-		</f:then>
-	</f:if>
-	<f:if condition="{layoutList} == 'Spacer'">
-		<f:then>
-			<div class="well-large"></div>
 		</f:then>
 	</f:if>
 </neos:contentElement>

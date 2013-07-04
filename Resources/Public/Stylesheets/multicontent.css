@@ -5,7 +5,11 @@
 .percent-one-fourth { width: 22%; }
 .percent-one-fifth { width: 16.8%; }
 .percent-big-half { width: 32.66%; }
+.percent-big-first{width: 70%; }
+.percent-small-first{width: 25%; }
 .percent-one-half,
+.percent-big-first,
+.percent-small-first,
 .percent-one-third,
 .percent-two-third,
 .percent-one-fourth,
@@ -29,7 +33,9 @@
 	.percent-two-third,
 	.percent-one-fourth,
 	.percent-one-fifth,
-	.percent-big-half {
+	.percent-big-half,
+	.percent-big-first,
+	.percent-small-first {
 		width: 100%;
 	}
 }
@@ -41,7 +47,9 @@
 	.percent-two-third,
 	.percent-one-fourth,
 	.percent-one-fifth,
-	.percent-big-half {
+	.percent-big-half,
+	.percent-big-first,
+	.percent-small-first {
 		width: 100%;
 	}
 }
@@ -53,7 +61,9 @@
 	.percent-two-third,
 	.percent-one-fourth,
 	.percent-one-fifth,
-	.percent-big-half {
+	.percent-big-half,
+	.percent-big-first,
+	.percent-small-first {
 		width: 100%;
 	}
 }

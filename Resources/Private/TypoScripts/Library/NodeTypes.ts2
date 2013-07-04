@@ -129,3 +129,28 @@ prototype(Lelesys.Plugin.NodeTypes:MultiContentSlideItem) {
 		collection = ${q(node).children()}
 	}
 }
+
+prototype(Lelesys.Plugin.NodeTypes:Divider) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.NodeTypes:Divider) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/Divider.html'
+}
+
+prototype(Lelesys.Plugin.NodeTypes:Spacer) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.NodeTypes:Spacer) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/Spacer.html'
+}
+
+prototype(Lelesys.Plugin.NodeTypes:Typography) < prototype(TYPO3.Neos.NodeTypes:Text)
+prototype(Lelesys.Plugin.NodeTypes:Typography) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/Typography.html'
+	title = ${q(node).property('title')}
+	moreLink = ${q(node).property('moreLink')}
+}
+
+prototype(Lelesys.Plugin.NodeTypes:TeamMember) < prototype(TYPO3.Neos.NodeTypes:Image)
+prototype(Lelesys.Plugin.NodeTypes:TeamMember) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/TeamMember.html'
+	title = ${q(node).property('title')}
+	description = ${q(node).property('description')}
+	moreLink = ${q(node).property('moreLink')}
+}

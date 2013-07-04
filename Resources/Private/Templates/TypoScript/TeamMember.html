@@ -1,0 +1,27 @@
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<neos:contentElement node="{node}">
+	<div class="thumbnail">
+		<f:if condition="{image.resource}">
+			<f:then>
+				<img src="{f:uri.resource(resource: image.resource)}" alt="image"/>
+			</f:then>
+			<f:else>
+				<img src="{f:uri.resource(package:'TYPO3.Neos', path:'Images/dummy-image.png')}" title="Dummy Image" />
+			</f:else>
+		</f:if>
+		<div class="caption">
+			<h3><neos:contentElement.editable property="title">{title -> f:format.raw()}</neos:contentElement.editable></h3>
+			<p><neos:contentElement.editable property="description">{description -> f:format.raw()}</neos:contentElement.editable></p>
+			<f:if condition="{moreLink}">
+				<f:then>
+					<p>
+						<a href="{moreLink}" class="btn btn-primary" target="blank">
+							More
+						</a>
+					</p>
+				</f:then>
+			</f:if>
+		</div>
+	</div>
+</neos:contentElement>

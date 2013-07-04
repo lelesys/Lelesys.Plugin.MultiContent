@@ -41,16 +41,16 @@
                 label: Structure65-35
               Structure35-65:
                 label: Structure35-65
+              Structure75-25:
+                label: Structure75-25
+              Structure25-75:
+                label: Structure25-75
               Structure33-33-33:
                 label: Structure33-33-33
               Structure25-25-25-25:
                 label: Structure25-25-25-25
               Structure20-20-20-20-20:
                 label: Structure20-20-20-20-20
-              Divider:
-                label: Horizontal Divider
-              Spacer:
-                label: Spacer
         reloadIfChanged: true
 
 'Lelesys.Plugin.NodeTypes:MultiContentTab':
@@ -202,3 +202,80 @@
   childNodes:
     slidecontent:
       type: 'TYPO3.Neos:ContentCollection'
+
+'Lelesys.Plugin.NodeTypes:Divider':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Lelesys Divider'
+    group: Plugins
+    icon:
+      light: Images/Icons/White/columns_icon-16.png
+      dark: Images/Icons/Black/columns_icon-16.png
+
+'Lelesys.Plugin.NodeTypes:Spacer':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Lelesys Spacer'
+    group: Plugins
+    icon:
+      light: Images/Icons/White/columns_icon-16.png
+      dark: Images/Icons/Black/columns_icon-16.png
+
+'Lelesys.Plugin.NodeTypes:Typography':
+  superTypes:
+    - 'TYPO3.Neos.NodeTypes:Text'
+  ui:
+    label: 'Lelesys Typography'
+    group: Plugins
+    icon:
+      light: 'Images/Icons/White/columns_icon-16.png'
+      dark: 'Images/Icons/Black/columns_icon-16.png'
+    inlineEditable: true
+    inspector:
+      groups:
+        typographyconfiguration:
+          label: 'Typography cofiguration'
+          priority: 2
+  properties:
+    title:
+      type: string
+      defaultValue: 'Enter title here'
+    moreLink:
+      type: string
+      ui:
+        label: 'Enter link here'
+        inspector:
+          group: typographyconfiguration
+
+'Lelesys.Plugin.NodeTypes:TeamMember':
+  superTypes:
+    - 'TYPO3.Neos.NodeTypes:Image'
+    - 'TYPO3.Neos.NodeTypes:Text'
+  ui:
+    label: 'Lelesys TeamMember'
+    group: Plugins
+    icon:
+      light: 'Images/Icons/White/columns_icon-16.png'
+      dark: 'Images/Icons/Black/columns_icon-16.png'
+    inlineEditable: true
+    inspector:
+      groups:
+        teammemberconfiguration:
+          label: 'TeamMember cofiguration'
+          priority: 2
+  properties:
+    title:
+      type: string
+      defaultValue: 'Enter title here'
+    description:
+      type: string
+      defaultValue: 'Enter description here'
+    moreLink:
+      type: string
+      ui:
+        label: 'Enter link here'
+        inspector:
+          group: teammemberconfiguration
+        reloadIfChanged: true
