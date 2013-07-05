@@ -3,21 +3,30 @@
 <f:security.ifAccess resource="TYPO3_Neos_Backend_BackendController">
 	<f:then>
 		<neos:contentElement node="{node}">
-			<div>
-				<span class="toggle-plus backend-plus"></span>
-				<h5><neos:contentElement.editable property="title">{title -> f:format.raw()}</neos:contentElement.editable></h5>
-				<div>
-					<neos:contentElement.editable property="text">{text -> f:format.raw()}</neos:contentElement.editable>
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<p><neos:contentElement.editable property="title">{title -> f:format.raw()}</neos:contentElement.editable></p>
+				</div>
+				<div class="accordion-body">
+					<div class="accordion-inner">
+						<neos:contentElement.editable property="text">{text -> f:format.raw()}</neos:contentElement.editable>
+					</div>
 				</div>
 			</div>
 		</neos:contentElement>
 	</f:then>
 	<f:else>
-		<li>
-			<h5><span class="toggle-plus"></span>{title}</h5>
-			<div class="panel well">
-				{text -> f:format.raw()}
+		<div class="accordion-group">
+			<div class="accordion-heading">
+				<a class="accordion-toggle" data-toggle="collapse" data-parent="#{node.parent.parent.identifier}" href="#{node.identifier}">
+					{title}
+				</a>
 			</div>
-		</li>
+			<div id="{node.identifier}" class="accordion-body collapse">
+				<div class="accordion-inner">
+					{text -> f:format.raw()}
+				</div>
+			</div>
+		</div>
 	</f:else>
 </f:security.ifAccess>

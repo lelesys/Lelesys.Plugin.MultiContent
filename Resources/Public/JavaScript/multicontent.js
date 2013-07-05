@@ -1,18 +1,3 @@
-// js for toggle structure
-$('.toggle-view li').click(function() {
-	var text = $(this).children('div.panel');
-	if (text.is(':hidden')) {
-		text.slideDown('200');
-		$(this).find('span').addClass('toggle-minus');
-		$(this).addClass('activated');
-	} else {
-		text.slideUp('200');
-		$(this).find('span').removeClass('toggle-minus');
-		$(this).find('span').addClass('toggle-plus');
-		$(this).removeClass('activated');
-	}
-});
-// end of js for toogle
 // js for slider + jquery.tinycarousel.min.js is required for slider
 $('.multi-slider').each(function() {
 	var view_port_width = $(this).find('.viewport').width();

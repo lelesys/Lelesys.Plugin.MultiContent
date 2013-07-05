@@ -52,17 +52,7 @@ Steps to add toogle structure into your own site
 include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/NodeTypes.ts2
 ```
 
-* include the plugin's Stylesheets to your own one's where you add other stylesheets of the site.
-
-```
-<link href="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/Stylesheets/multicontent.css')}" rel="stylesheet" media="screen">
-```
-
-* include the plugin's Javascript to your own one's where you add other javascript files of the site.
-
-`<script src="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/JavaScript/multicontent.js')}"></script>`
-
-* include the plugin's Images into your own site's Image folder where you add other images of the site.
+* Js and Css is base on twitter bootstrap, so need to include twitter bootstrap css and js.
 
 * add the plugin content element "Lelesys Toggle Structure" to the position of your choice and inside that
 plugin add another plugin "Lelesys Toggle Item" and enter title and text in respected positions.

@@ -3,9 +3,9 @@
 <neos:contentElement node="{node}">
 	<f:if condition="{toggleCollection}">
 		<f:then>
-			<ul class="toggle-view">
+			<div class="accordion" id="{node.identifier}">
 				<ts:render path="toggleItemCollection" />
-			</ul>
+			</div>
 		</f:then>
 		<f:else>
 			<div>&nbsp;</div>
