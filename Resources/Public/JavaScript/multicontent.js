@@ -11,7 +11,7 @@ $('.multi-slider').each(function() {
 		display: parseInt(properties['display']),
 		controls: properties['controls'],
 		interval: properties['interval'],
-		intervaltime: parseInt(properties['intervaltime']),
+		intervaltime: parseInt(properties['intervalTime']),
 		animation: properties['animation'],
 		duration: parseInt(properties['duration']),
 		callback: function(element, index) {

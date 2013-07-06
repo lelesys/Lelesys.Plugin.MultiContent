@@ -5,9 +5,7 @@
     label: 'Lelesys MultiContent'
     group: Plugins
     inlineEditable: true
-    icon:
-      light: Images/Icons/White/columns_icon-16.png
-      dark: Images/Icons/Black/columns_icon-16.png
+    icon: 'icon-puzzle-piece'
     inspector:
       groups:
         structure:
@@ -59,9 +57,7 @@
   ui:
     group: Plugins
     label: 'Lelesys Tab Structure'
-    icon:
-      light: Images/Icons/White/columns_icon-16.png
-      dark: Images/Icons/Black/columns_icon-16.png
+    icon: 'icon-puzzle-piece'
     inlineEditable: true
   childNodes:
     tabs:
@@ -74,9 +70,7 @@
     label: 'Lelesys Tab Item'
     group: Plugins
     inlineEditable: true
-    icon:
-      light: Images/Icons/White/columns_icon-16.png
-      dark: Images/Icons/Black/columns_icon-16.png
+    icon: 'icon-puzzle-piece'
     inspector:
       groups:
         tabitem:
@@ -100,9 +94,7 @@
     label: 'Lelesys Toggle Structure'
     group: Plugins
     inlineEditable: true
-    icon:
-      light: 'Images/Icons/White/columns_icon-16.png'
-      dark: 'Images/Icons/Black/columns_icon-16.png'
+    icon: 'icon-puzzle-piece'
   childNodes:
     toggle:
       type: 'TYPO3.Neos:ContentCollection'
@@ -114,9 +106,7 @@
     label: 'Lelesys Toggle Item'
     group: Plugins
     inlineEditable: true
-    icon:
-      light: 'Images/Icons/White/columns_icon-16.png'
-      dark: 'Images/Icons/Black/columns_icon-16.png'
+    icon: 'icon-puzzle-piece'
   properties:
     title:
       type: string
@@ -128,9 +118,7 @@
   ui:
     group: Plugins
     label: 'Lelesys Slider Structure'
-    icon:
-      light: Images/Icons/White/columns_icon-16.png
-      dark: Images/Icons/Black/columns_icon-16.png
+    icon: 'icon-puzzle-piece'
     inlineEditable: true
     inspector:
       groups:
@@ -183,7 +171,7 @@
         label: 'Auto slide: enable auto slide?'
         inspector:
           group: sliderconfiguration
-    intervaltime:
+    intervalTime:
       type: string
       defaultValue: '3000'
       ui:
@@ -198,9 +186,7 @@
     label: 'Lelesys Slider Item'
     group: Plugins
     inlineEditable: true
-    icon:
-      light: Images/Icons/White/columns_icon-16.png
-      dark: Images/Icons/Black/columns_icon-16.png
+    icon: 'icon-puzzle-piece'
   childNodes:
     slidecontent:
       type: 'TYPO3.Neos:ContentCollection'
@@ -211,9 +197,7 @@
   ui:
     label: 'Lelesys Divider'
     group: Plugins
-    icon:
-      light: Images/Icons/White/columns_icon-16.png
-      dark: Images/Icons/Black/columns_icon-16.png
+    icon: 'icon-puzzle-piece'
 
 'Lelesys.Plugin.NodeTypes:Spacer':
   superTypes:
@@ -221,9 +205,7 @@
   ui:
     label: 'Lelesys Spacer'
     group: Plugins
-    icon:
-      light: Images/Icons/White/columns_icon-16.png
-      dark: Images/Icons/Black/columns_icon-16.png
+    icon: 'icon-puzzle-piece'
 
 'Lelesys.Plugin.NodeTypes:Typography':
   superTypes:
@@ -231,9 +213,7 @@
   ui:
     label: 'Lelesys Typography'
     group: Plugins
-    icon:
-      light: 'Images/Icons/White/columns_icon-16.png'
-      dark: 'Images/Icons/Black/columns_icon-16.png'
+    icon: 'icon-puzzle-piece'
     inlineEditable: true
     inspector:
       groups:
@@ -258,9 +238,7 @@
   ui:
     label: 'Lelesys TeamMember'
     group: Plugins
-    icon:
-      light: 'Images/Icons/White/columns_icon-16.png'
-      dark: 'Images/Icons/Black/columns_icon-16.png'
+    icon: 'icon-puzzle-piece'
     inlineEditable: true
     inspector:
       groups:
