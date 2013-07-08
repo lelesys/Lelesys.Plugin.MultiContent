@@ -1,12 +1,14 @@
-TYPO3 Neos Lelesys MultiContent Plugin
+Lelesys MultiContent Plugin
 ======================
 
-This plugin displays content in a TYPO3 Neos websites in many different and pleasant structures.
+This plugin displays content in your websites in many different and pleasant structures.
+
+Warning: This plugin is experimental.
 
 Quick start
 -----------
 
-* include the plugin's TypoScript definitions to your own one's (located in, for example,Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2, with:
+* include the plugin's TypoScript definitions to your own one's (located in, for example,Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2) with:
 
 ```
 include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/NodeTypes.ts2
@@ -23,7 +25,7 @@ include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/Node
 Steps to add tab structure
 ------------
 
-* include the plugin's TypoScript definitions to your own one's (located in, for example, Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2, with:
+* include the plugin's TypoScript definitions to your own one's (located in, for example, Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2) with:
 
 ```
 include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/NodeTypes.ts2
@@ -46,7 +48,7 @@ other content elements.
 Steps to add toogle structure into your own site
 ------------------------------------------------
 
-* include the plugin's TypoScript definitions to your own one's (located in, for example, Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2, with:
+* include the plugin's TypoScript definitions to your own one's (located in, for example, Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2) with:
 
 ```
 include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/NodeTypes.ts2
@@ -60,7 +62,7 @@ plugin add another plugin "Lelesys Toggle Item" and enter title and text in resp
 Steps to add slider structure into your own site
 ------------------------------------------------
 
-* include the plugin's TypoScript definitions to your own one's (located in, for example, Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2, with:
+* include the plugin's TypoScript definitions to your own one's (located in, for example, Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2) with:
 
 ```
 include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/NodeTypes.ts2
