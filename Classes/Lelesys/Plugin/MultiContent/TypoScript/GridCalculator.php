@@ -1,9 +1,14 @@
 <?php
+
 namespace Lelesys\Plugin\MultiContent\TypoScript;
 
-/*                                                                               *
- * This script belongs to the TYPO3 Flow package " Lelesys.Plugin.MultiContent". *
- *                                                                               */
+/*                                                                              *
+ * This script belongs to the TYPO3 Flow package " Lelesys.Plugin.MultiContent".*
+ * It is free software; you can redistribute it and/or modify it under          *
+ * the terms of the GNU Lesser General Public License, either version 3         *
+ * of the License, or (at your option) any later version.                       *
+ *
+ */
 
 use TYPO3\Flow\Annotations as Flow;
 
@@ -12,6 +17,7 @@ use TYPO3\Flow\Annotations as Flow;
  *
  */
 class GridCalculator extends \TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject {
+
 	/**
 	 * @return mixed|void
 	 */
@@ -22,5 +28,7 @@ class GridCalculator extends \TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScr
 		$columnSpan = ceil(0.12 * $layoutPieces[$context['columIterator']['index']]);
 		return $columnSpan;
 	}
+
 }
+
 ?>
