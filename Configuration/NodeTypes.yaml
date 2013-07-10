@@ -1,261 +1,187 @@
-'Lelesys.Plugin.NodeTypes:MultiContent':
+'Lelesys.Plugin.MultiContent:Tab':
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:
-    label: 'Lelesys MultiContent'
-    group: Plugins
-    inlineEditable: true
-    icon: 'icon-puzzle-piece'
-    inspector:
-      groups:
-        structure:
-          label: Structures
-          priority: 30
+    group: Structure
+    label: 'Tab Container'
+    icon: 'icon-list'
+    inlineEditable: TRUE
   childNodes:
-    column1:
-      type: 'TYPO3.Neos:ContentCollection'
-    column2:
-      type: 'TYPO3.Neos:ContentCollection'
-    column3:
-      type: 'TYPO3.Neos:ContentCollection'
-    column4:
-      type: 'TYPO3.Neos:ContentCollection'
-    column5:
-      type: 'TYPO3.Neos:ContentCollection'
-  properties:
-    layoutList:
-      type: string
-      defaultValue: Structure50-50
-      ui:
-        label: 'Select Structure'
-        inspector:
-          group: structure
-          editor: Content/Inspector/Editors/SelectBoxEditor
-          editorOptions:
-            values:
-              Structure50-50:
-                label: Structure50-50
-              Structure65-35:
-                label: Structure65-35
-              Structure35-65:
-                label: Structure35-65
-              Structure75-25:
-                label: Structure75-25
-              Structure25-75:
-                label: Structure25-75
-              Structure33-33-33:
-                label: Structure33-33-33
-              Structure25-25-25-25:
-                label: Structure25-25-25-25
-              Structure20-20-20-20-20:
-                label: Structure20-20-20-20-20
-        reloadIfChanged: true
-
-'Lelesys.Plugin.NodeTypes:MultiContentTab':
-  superTypes:
-    - 'TYPO3.Neos:Content'
-  ui:
-    group: Plugins
-    label: 'Lelesys Tab Structure'
-    icon: 'icon-puzzle-piece'
-    inlineEditable: true
-  childNodes:
-    tabs:
+    items:
       type: 'TYPO3.Neos:ContentCollection'
 
-'Lelesys.Plugin.NodeTypes:MultiContentTabItem':
+'Lelesys.Plugin.MultiContent:TabItem':
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:
-    label: 'Lelesys Tab Item'
-    group: Plugins
-    inlineEditable: true
-    icon: 'icon-puzzle-piece'
+    label: 'Tab Item'
+    group: Structure
+    icon: 'icon-plus-sign'
+    inlineEditable: TRUE
     inspector:
       groups:
-        tabitem:
+        tabItem:
           label: 'Tab Item Name'
           priority: 2
   childNodes:
-    tabcontent:
+    content:
       type: 'TYPO3.Neos:ContentCollection'
   properties:
     title:
       type: string
       ui:
         label: 'Tab Title'
+        reloadIfChanged: TRUE
         inspector:
-          group: tabitem
+          group: tabItem
 
-'Lelesys.Plugin.NodeTypes:MultiContentToggle':
+'Lelesys.Plugin.MultiContent:Accordion':
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:
-    label: 'Lelesys Toggle Structure'
-    group: Plugins
-    inlineEditable: true
-    icon: 'icon-puzzle-piece'
+    label: 'Accordion Container'
+    group: Structure
+    icon: 'icon-list'
+    inlineEditable: TRUE
   childNodes:
-    toggle:
+    items:
       type: 'TYPO3.Neos:ContentCollection'
 
-'Lelesys.Plugin.NodeTypes:MultiContentToggleItem':
+'Lelesys.Plugin.MultiContent:AccordionItem':
   superTypes:
-    - 'TYPO3.Neos.NodeTypes:Text'
+    - 'TYPO3.Neos:Content'
   ui:
-    label: 'Lelesys Toggle Item'
-    group: Plugins
-    inlineEditable: true
-    icon: 'icon-puzzle-piece'
+    label: 'Accordion Item'
+    group: Structure
+    icon: 'icon-plus-sign'
+    inlineEditable: TRUE
+  childNodes:
+    content:
+      type: 'TYPO3.Neos:ContentCollection'
   properties:
     title:
       type: string
       defaultValue: 'Enter title here'
+      ui:
+        inlineEditable: TRUE
 
-'Lelesys.Plugin.NodeTypes:MultiContentSlide':
+'Lelesys.Plugin.MultiContent:Carousel':
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:
-    group: Plugins
-    label: 'Lelesys Slider Structure'
-    icon: 'icon-puzzle-piece'
-    inlineEditable: true
+    group: Structure
+    label: 'Carousel Container'
+    icon: 'icon-list'
+    inlineEditable: TRUE
     inspector:
       groups:
-        sliderconfiguration:
-          label: 'Slider cofiguration'
+        carouselConfiguration:
+          label: 'Carousel cofiguration'
           priority: 2
   childNodes:
-    slides:
+    items:
       type: 'TYPO3.Neos:ContentCollection'
   properties:
-    start:
-      type: string
-      defaultValue: '1'
-      ui:
-        label: 'Start point: where should the carousel start?'
-        inspector:
-          group: sliderconfiguration
-    display:
-      type: string
-      defaultValue: '1'
-      ui:
-        label: 'Display: how many blocks do you want to move at a time?'
-        inspector:
-          group: sliderconfiguration
-    controls:
-      type: boolean
-      defaultValue: 1
-      ui:
-        label: 'Controls: show navigation buttons?'
-        inspector:
-          group: sliderconfiguration
-    animation:
-      type: boolean
-      defaultValue: 1
-      ui:
-        label: 'Animation: false is instant, true is animate.'
-        inspector:
-          group: sliderconfiguration
-    duration:
-      type: string
-      defaultValue: '1000'
-      ui:
-        label: 'Duration: how fast must the animation move in milliseconds?'
-        inspector:
-          group: sliderconfiguration
     interval:
       type: boolean
-      defaultValue: 0
+      defaultValue: FALSE
       ui:
-        label: 'Auto slide: enable auto slide?'
+        label: 'Auto slide'
         inspector:
-          group: sliderconfiguration
-    intervalTime:
-      type: string
-      defaultValue: '3000'
-      ui:
-        label: 'Auto slide interval: time in milliseconds.'
-        inspector:
-          group: sliderconfiguration
+          group: carouselConfiguration
 
-'Lelesys.Plugin.NodeTypes:MultiContentSlideItem':
+
+'Lelesys.Plugin.MultiContent:CarouselItem':
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:
-    label: 'Lelesys Slider Item'
-    group: Plugins
-    inlineEditable: true
-    icon: 'icon-puzzle-piece'
+    label: 'Carousel Item'
+    group: Structure
+    icon: 'icon-plus-sign'
+    inlineEditable: TRUE
   childNodes:
-    slidecontent:
+    content:
       type: 'TYPO3.Neos:ContentCollection'
+  properties:
+    caption:
+      type: string
+      defaultValue: 'Enter caption here'
+      ui:
+        inlineEditable: TRUE
 
-'Lelesys.Plugin.NodeTypes:Divider':
+'Lelesys.Plugin.MultiContent:HorizontalRule':
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:
-    label: 'Lelesys Divider'
-    group: Plugins
-    icon: 'icon-puzzle-piece'
+    label: 'Horizontal rule'
+    group: Structure
+    icon: 'icon-resize-horizontal'
 
-'Lelesys.Plugin.NodeTypes:Spacer':
+'Lelesys.Plugin.MultiContent:Well':
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:
-    label: 'Lelesys Spacer'
-    group: Plugins
-    icon: 'icon-puzzle-piece'
+    label: 'Well'
+    group: Structure
+    icon: 'icon-edit'
+    inlineEditable: TRUE
+    inspector:
+      groups:
+        wellConfiguration:
+          label: 'Well cofiguration'
+          priority: 2
+  childNodes:
+    content:
+      type: 'TYPO3.Neos:ContentCollection'
+  properties:
+    size:
+      type: string
+      defaultValue: 'large'
+      ui:
+        label: 'Size'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'wellConfiguration'
+          editor: Content/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: 'Default'
+            values:
+              large:
+                label: 'Large'
+              small:
+                label: 'Small'
 
-'Lelesys.Plugin.NodeTypes:Typography':
+'Lelesys.Plugin.MultiContent:HeroUnit':
   superTypes:
     - 'TYPO3.Neos.NodeTypes:Text'
   ui:
-    label: 'Lelesys Typography'
-    group: Plugins
-    icon: 'icon-puzzle-piece'
-    inlineEditable: true
-    inspector:
-      groups:
-        typographyconfiguration:
-          label: 'Typography cofiguration'
-          priority: 2
+    label: 'Hero unit'
+    group: Structure
+    icon: 'icon-font'
+    inlineEditable: TRUE
   properties:
     title:
       type: string
       defaultValue: 'Enter title here'
-    moreLink:
-      type: string
       ui:
-        label: 'Enter link here'
-        inspector:
-          group: typographyconfiguration
+        inlineEditable: TRUE
 
-'Lelesys.Plugin.NodeTypes:TeamMember':
+'Lelesys.Plugin.MultiContent:TeamMember':
   superTypes:
     - 'TYPO3.Neos.NodeTypes:Image'
     - 'TYPO3.Neos.NodeTypes:Text'
   ui:
-    label: 'Lelesys TeamMember'
-    group: Plugins
-    icon: 'icon-puzzle-piece'
-    inlineEditable: true
-    inspector:
-      groups:
-        teammemberconfiguration:
-          label: 'TeamMember cofiguration'
-          priority: 2
+    label: 'Team Member'
+    group: Structure
+    icon: 'icon-user'
   properties:
     title:
       type: string
       defaultValue: 'Enter title here'
+      ui:
+        inlineEditable: TRUE
     description:
       type: string
       defaultValue: 'Enter description here'
-    moreLink:
-      type: string
       ui:
-        label: 'Enter link here'
-        inspector:
-          group: teammemberconfiguration
-        reloadIfChanged: true
+        inlineEditable: TRUE

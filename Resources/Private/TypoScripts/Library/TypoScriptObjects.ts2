@@ -1,0 +1,9 @@
+# This file contains custom TypoScriptObjects which are not NodeTypes
+
+# This object is used to calculate column span of a multi-column structure.
+# layout property of the parent MultiColumn container is read and then class for
+# each column in calculated. e.g. if the layout is 50-50 then each column will get
+# class span6
+prototype(Lelesys.Plugin.MultiContent:GridCalculator) {
+	@class = 'Lelesys\\Plugin\\MultiContent\\TypoScript\\GridCalculator'
+}

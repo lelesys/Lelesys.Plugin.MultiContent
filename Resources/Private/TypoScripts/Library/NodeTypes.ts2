@@ -1,156 +1,109 @@
-# MultiContent
-prototype(Lelesys.Plugin.NodeTypes:MultiContent) < prototype(TYPO3.Neos:Template)
-prototype(Lelesys.Plugin.NodeTypes:MultiContent) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/MultiContent.html'
-	layoutList = ${q(node).property('layoutList')}
-	columnContent1 = TYPO3.Neos:ContentCollection
-	columnContent1 {
-		nodePath = 'column1'
-		collection = ${q(node).children()}
-	}
-	columnContent2 = TYPO3.Neos:ContentCollection
-	columnContent2 {
-		nodePath = 'column2'
-		collection = ${q(node).children()}
-	}
-	columnContent3 = TYPO3.Neos:ContentCollection
-	columnContent3 {
-		nodePath = 'column3'
-		collection = ${q(node).children()}
-	}
-	columnContent4 = TYPO3.Neos:ContentCollection
-	columnContent4 {
-		nodePath = 'column4'
-		collection = ${q(node).children()}
-	}
-	columnContent5 = TYPO3.Neos:ContentCollection
-	columnContent5 {
-		nodePath = 'column5'
-		collection = ${q(node).children()}
-	}
-}
+include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/TypoScriptObjects.ts2
 
-prototype(Lelesys.Plugin.NodeTypes:MultiContentTab) < prototype(TYPO3.Neos:Template)
-prototype(Lelesys.Plugin.NodeTypes:MultiContentTab) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/TabStructure.html'
-	tabsCollection = ${q(node).children('tabs').children()}
-	tabItemCollection = TYPO3.Neos:ContentCollection
-	tabItemCollection {
-		nodePath = 'tabs'
-		collection = ${q(node).children()}
-	}
-	tabsToRender = TYPO3.Neos:ContentCollection
-	tabsToRender {
-		nodePath = 'tabs'
-	}
-}
-
-prototype(Lelesys.Plugin.NodeTypes:MultiContentTabItem) < prototype(TYPO3.Neos:Template)
-prototype(Lelesys.Plugin.NodeTypes:MultiContentTabItem) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/TabItem.html'
-	tabContainerNode = ${q(node).property('_parent.parent')}
-	contentContainer = TYPO3.Neos:ContentCollection
-	contentContainer {
-		nodePath = 'tabcontent'
-		collection = ${q(node).children()}
-	}
-}
-
-prototype(Lelesys.Plugin.NodeTypes:MultiContentToggle) < prototype(TYPO3.Neos:Template)
-prototype(Lelesys.Plugin.NodeTypes:MultiContentToggle) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/ToggleStructure.html'
-	toggleCollection = ${q(node).children('toggle').children()}
-	toggleItemCollection = TYPO3.Neos:ContentCollection
-	toggleItemCollection {
-		nodePath = 'toggle'
-		collection = ${q(node).children()}
-	}
-	toggleToRender = TYPO3.Neos:ContentCollection
-	toggleToRender {
-		nodePath = 'toggle'
-	}
-}
-
-prototype(Lelesys.Plugin.NodeTypes:MultiContentToggleItem) < prototype(TYPO3.Neos.NodeTypes:Text)
-prototype(Lelesys.Plugin.NodeTypes:MultiContentToggleItem) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/ToggleItem.html'
-	title = ${q(node).property('title')}
-}
-
-# Definition of custom TypoScript types
-
-# Override template path for multi-column layout
+# Override Neos multi-column structure with Twitter bootstrap based grid columns
 prototype(TYPO3.Neos.NodeTypes:MultiColumn) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/MultiColumn.html'
-	columns.iterationName = 'columIterator'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/MultiColumn.html'
+	# this is used in GridCalculator
+	columns.iterationName = 'columnIterator'
 }
-# reload - Two Column TS Object
-prototype(TYPO3.Neos.NodeTypes:TwoColumn) < prototype(TYPO3.Neos.NodeTypes:MultiColumn)
 
-# reload - Three Column TS Object
-prototype(TYPO3.Neos.NodeTypes:ThreeColumn) < prototype(TYPO3.Neos.NodeTypes:MultiColumn)
-
-# reload - Four Column TS Object
-prototype(TYPO3.Neos.NodeTypes:FourColumn) < prototype(TYPO3.Neos.NodeTypes:MultiColumn)
-
-# Override template path and add additional variable
 prototype(TYPO3.Neos.NodeTypes:MultiColumnItem) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/MultiColumnItem.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/MultiColumnItem.html'
+	# this use used in GridCalculator
 	columnSpan = Lelesys.Plugin.MultiContent:GridCalculator
 }
 
-prototype(Lelesys.Plugin.MultiContent:GridCalculator) {
-	@class = 'Lelesys\\Plugin\\MultiContent\\TypoScript\\GridCalculator'
+prototype(Lelesys.Plugin.MultiContent:Tab) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:Tab) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/TabStructure.html'
+
+	# this collection is only used to render the tab navigation elements
+	tabItemCollection = ${q(node).children('items').children('[instanceof Lelesys.Plugin.MultiContent:TabItem]')}
+
+	tabs = TYPO3.Neos:ContentCollection
+	tabs {
+		nodePath = 'items'
+	}
 }
 
-prototype(Lelesys.Plugin.NodeTypes:MultiContentSlide) < prototype(TYPO3.Neos:Template)
-prototype(Lelesys.Plugin.NodeTypes:MultiContentSlide) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/SlideStructure.html'
-	slidesCollection = ${q(node).children('slides').children()}
-	slideItemCollection = TYPO3.Neos:ContentCollection
-	slideItemCollection {
-		nodePath = 'slides'
-		collection = ${q(node).children()}
-	}
-	slidesToRender = TYPO3.Neos:ContentCollection
-	slidesToRender {
-		nodePath = 'slides'
-	}
-	properties = ${node.properties}
-}
+prototype(Lelesys.Plugin.MultiContent:TabItem) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:TabItem) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/TabItem.html'
 
-prototype(Lelesys.Plugin.NodeTypes:MultiContentSlideItem) < prototype(TYPO3.Neos:Template)
-prototype(Lelesys.Plugin.NodeTypes:MultiContentSlideItem) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/SlideItem.html'
-	SlideContainerNode = ${q(node).property('_parent.parent')}
 	contentContainer = TYPO3.Neos:ContentCollection
 	contentContainer {
-		nodePath = 'slidecontent'
-		collection = ${q(node).children()}
+		nodePath = 'content'
+	}
+	title = ${q(node).property('title')}
+}
+
+prototype(Lelesys.Plugin.MultiContent:Accordion) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:Accordion) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Accordion.html'
+
+	accordionItems = TYPO3.Neos:ContentCollection
+	accordionItems {
+		nodePath = 'items'
 	}
 }
 
-prototype(Lelesys.Plugin.NodeTypes:Divider) < prototype(TYPO3.Neos:Template)
-prototype(Lelesys.Plugin.NodeTypes:Divider) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/Divider.html'
-}
-
-prototype(Lelesys.Plugin.NodeTypes:Spacer) < prototype(TYPO3.Neos:Template)
-prototype(Lelesys.Plugin.NodeTypes:Spacer) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/Spacer.html'
-}
-
-prototype(Lelesys.Plugin.NodeTypes:Typography) < prototype(TYPO3.Neos.NodeTypes:Text)
-prototype(Lelesys.Plugin.NodeTypes:Typography) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/Typography.html'
+prototype(Lelesys.Plugin.MultiContent:AccordionItem) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:AccordionItem) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/AccordionItem.html'
 	title = ${q(node).property('title')}
-	moreLink = ${q(node).property('moreLink')}
+	contentContainer = TYPO3.Neos:ContentCollection
+	contentContainer {
+		nodePath = 'content'
+	}
 }
 
-prototype(Lelesys.Plugin.NodeTypes:TeamMember) < prototype(TYPO3.Neos.NodeTypes:Image)
-prototype(Lelesys.Plugin.NodeTypes:TeamMember) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScript/TeamMember.html'
+
+prototype(Lelesys.Plugin.MultiContent:Carousel) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:Carousel) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Carousel.html'
+	carouselItemsCollection = ${q(node).children('items').children('[instanceof Lelesys.Plugin.MultiContent:CarouselItem]')}
+	carouselItems = TYPO3.Neos:ContentCollection
+	carouselItems {
+		nodePath = 'items'
+	}
+	interval = ${q(node).property('interval')}
+}
+
+prototype(Lelesys.Plugin.MultiContent:CarouselItem) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:CarouselItem) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/CarouselItem.html'
+
+	contentContainer = TYPO3.Neos:ContentCollection
+	contentContainer {
+		nodePath = 'content'
+	}
+	caption = ${q(node).property('caption')}
+}
+
+prototype(Lelesys.Plugin.MultiContent:HorizontalRule) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:HorizontalRule) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/HorizontalRule.html'
+}
+
+prototype(Lelesys.Plugin.MultiContent:Well) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:Well) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Well.html'
+	contentContainer = TYPO3.Neos:ContentCollection
+	contentContainer {
+		nodePath = 'content'
+	}
+	size = ${q(node).property('size')}
+}
+
+prototype(Lelesys.Plugin.MultiContent:HeroUnit) < prototype(TYPO3.Neos.NodeTypes:Text)
+prototype(Lelesys.Plugin.MultiContent:HeroUnit) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/HeroUnit.html'
+	title = ${q(node).property('title')}
+}
+
+prototype(Lelesys.Plugin.MultiContent:TeamMember) < prototype(TYPO3.Neos.NodeTypes:Image)
+prototype(Lelesys.Plugin.MultiContent:TeamMember) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/TeamMember.html'
 	title = ${q(node).property('title')}
 	description = ${q(node).property('description')}
-	moreLink = ${q(node).property('moreLink')}
 }

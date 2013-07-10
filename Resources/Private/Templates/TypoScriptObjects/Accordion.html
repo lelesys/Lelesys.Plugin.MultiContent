@@ -1,0 +1,7 @@
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<neos:contentElement node="{node}">
+	<div class="accordion" id="{node.name}">
+		<ts:render path="accordionItems" />
+	</div>
+</neos:contentElement>

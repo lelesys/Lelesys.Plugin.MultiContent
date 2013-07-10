@@ -1,0 +1,33 @@
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<f:security.ifAccess resource="TYPO3_Neos_Backend_BackendController">
+	<f:then>
+		<neos:contentElement node="{node}">
+			<ts:render path="carouselItems" />
+		</neos:contentElement>
+	</f:then>
+	<f:else>
+		<div id="carousel-{node.name}" class="carousel slide">
+			<f:if condition="{carouselItemsCollection}">
+				<ol class="carousel-indicators">
+					<f:for each="{carouselItemsCollection}" as="item" iteration="iterator">
+						<li data-target="#carousel-{node.name}" data-slide-to="{iterator.index}"{f:if(condition: iterator.isFirst, then: ' class="active"')}></li>
+					</f:for>
+				</ol>
+			</f:if>
+			<!-- Carousel items -->
+			<div class="carousel-inner">
+				<ts:render path="carouselItems" />
+			</div>
+			<!-- Carousel nav -->
+			<a class="carousel-control left" href="#carousel-{node.name}" data-slide="prev">&lsaquo;</a>
+			<a class="carousel-control right" href="#carousel-{node.name}" data-slide="next">&rsaquo;</a>
+		</div>
+		<!-- FIXME
+		<script type="text/javascript">
+			$('#carousel-{node.name}').carousel({
+  				interval: "{interval}"
+	  		});
+		</script> -->
+	</f:else>
+</f:security.ifAccess>

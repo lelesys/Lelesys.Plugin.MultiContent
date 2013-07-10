@@ -1,0 +1,16 @@
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<neos:contentElement node="{node}">
+	<f:if condition="{tabItemCollection}">
+		<f:then>
+			<ul class="nav nav-tabs" id="tabs-{node.name}">
+				<f:for each="{tabItemCollection}" as="tabItem" iteration="tabItemIterator">
+					<li{f:if(condition: tabItemIterator.isFirst, then: ' class="active"')}><a data-toggle="tab" href="#tab-{tabItem.name}">{tabItem.properties.title}</a></li>
+				</f:for>
+			</ul>
+		</f:then>
+	</f:if>
+	<div class="tab-content">
+		<ts:render path="tabs" />
+	</div>
+</neos:contentElement>
