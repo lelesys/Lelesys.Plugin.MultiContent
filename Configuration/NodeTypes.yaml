@@ -117,6 +117,14 @@
     group: Structure
     icon: 'icon-resize-horizontal'
 
+'Lelesys.Plugin.MultiContent:Spacer':
+  superTypes:
+    - 'TYPO3.Neos:Content'
+  ui:
+    label: 'Spacer'
+    group: Structure
+    icon: 'icon-resize-vertical'
+
 'Lelesys.Plugin.MultiContent:Well':
   superTypes:
     - 'TYPO3.Neos:Content'

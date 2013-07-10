@@ -85,6 +85,11 @@ prototype(Lelesys.Plugin.MultiContent:HorizontalRule) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/HorizontalRule.html'
 }
 
+prototype(Lelesys.Plugin.MultiContent:Spacer) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:Spacer) {
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Spacer.html'
+}
+
 prototype(Lelesys.Plugin.MultiContent:Well) < prototype(TYPO3.Neos:Template)
 prototype(Lelesys.Plugin.MultiContent:Well) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Well.html'

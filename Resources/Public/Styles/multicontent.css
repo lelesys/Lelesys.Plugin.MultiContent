@@ -1,3 +1,7 @@
+.spacer {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 .neos-backend .lelesys-plugin-multicontent-carouselitem .item {
 	padding: 10px;
 }
