@@ -1,16 +1,34 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
 {namespace neos=TYPO3\Neos\ViewHelpers}
-<neos:contentElement node="{node}">
-	<div class="accordion-group">
-		<div class="accordion-heading">
-			<a class="accordion-toggle" data-toggle="collapse" data-parent="#{node.parent.parent.name}" href="#accordion-{node.name}">
-				<neos:contentElement.editable property="title">{title -> f:format.raw()}</neos:contentElement.editable>
-			</a>
-		</div>
-		<div id="accordion-{node.name}" class="accordion-body collapse">
-			<div class="accordion-inner">
-				<ts:render path="contentContainer" />
+<f:security.ifAccess resource="TYPO3_Neos_Backend_BackendController">
+	<f:then>
+		<neos:contentElement node="{node}">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<span class="accordion-toggle">
+						<neos:contentElement.editable property="title">{title -> f:format.raw()}</neos:contentElement.editable>
+					</span>
+				</div>
+				<div class="accordion-body">
+					<div class="accordion-inner">
+						<ts:render path="contentContainer" />
+					</div>
+				</div>
+			</div>
+		</neos:contentElement>
+	</f:then>
+	<f:else>
+		<div class="accordion-group">
+			<div class="accordion-heading">
+				<a class="accordion-toggle" data-toggle="collapse" data-parent="#{node.parent.parent.name}" href="#accordion-{node.name}">
+					{title -> f:format.raw()}
+				</a>
+			</div>
+			<div id="accordion-{node.name}" class="accordion-body collapse">
+				<div class="accordion-inner">
+					<ts:render path="contentContainer" />
+				</div>
 			</div>
 		</div>
-	</div>
-</neos:contentElement>
+	</f:else>
+</f:security.ifAccess>
