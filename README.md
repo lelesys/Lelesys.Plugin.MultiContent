@@ -39,7 +39,7 @@ include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/Node
 
 * include the plugin's Javascript to your own one's where you add other javascript files of the site.
 
-`<script src="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/JavaScript/MultiContent.js')}"></script>`
+```<script src="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/JavaScript/MultiContent.js')}"></script>```
 
 * add the plugin content element "Lelesys Tab Structure" to the position of your choice and inside that
 plugin add as many "Lelesys Tab Item" plugin as you want with "Text", "Image", "Text with Image" or any
@@ -76,9 +76,9 @@ include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/Node
 
 * include the plugin's Javascript to your own one's where you add other javascript files of the site.
 
-`<script src="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/JavaScript/jquery.tinycarousel.min.js')}"></script>`
+```<script src="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/JavaScript/jquery.tinycarousel.min.js')}"></script>```
 
-`<script src="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/JavaScript/MultiContent.js')}"></script>`
+```<script src="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/JavaScript/MultiContent.js')}"></script>```
 
 * add the plugin content element "Lelesys slide Structure" to the position of your choice and inside that
 plugin add another plugin "Lelesys slide Item" per slide and add the content into it.
