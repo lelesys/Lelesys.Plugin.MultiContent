@@ -1,17 +1,15 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
 {namespace neos=TYPO3\Neos\ViewHelpers}
-<f:security.ifAccess resource="TYPO3_Neos_Backend_BackendController">
+<f:security.ifAccess resource="TYPO3_Neos_Backend_GeneralAccess">
 	<f:then>
-		<neos:contentElement node="{node}">
-			<ts:render path="contentContainer" />
-			<p>
-				<neos:contentElement.editable property="caption">{caption -> f:format.raw()}</neos:contentElement.editable>
-			</p>
-		</neos:contentElement>
+		{contentContainer -> f:format.raw()}
+		<p>
+		<neos:contentElement.editable property="caption">{caption -> f:format.raw()}</neos:contentElement.editable>
+		</p>
 	</f:then>
 	<f:else>
 		<div class="item">
-			<ts:render path="contentContainer" />
+			{contentContainer -> f:format.raw()}
 			<div class="carousel-caption">
 				{caption -> f:format.raw()}
 			</div>

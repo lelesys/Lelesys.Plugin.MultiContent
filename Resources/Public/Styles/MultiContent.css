@@ -21,3 +21,20 @@
 .neos-backend .tab-content .active {
 	display: block;
 }
+.tab-content .tab-pane {
+	display: none;
+}
+
+.tab-content .active {
+	display: block;
+}
+.neos-backend .tab-content .tab-pane {
+	display: none;
+}
+
+.neos-backend .tab-content .active {
+	display: block;
+}
+div.carousel ol {
+	list-style: none;
+}

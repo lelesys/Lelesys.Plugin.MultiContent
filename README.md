@@ -3,26 +3,22 @@ Lelesys MultiContent Plugin
 
 This plugin displays content in your websites in many different and pleasant structures.
 
-Warning: This plugin is experimental.
+##### Important note: Initial package development was done when TYPO3 Neos was at alpha3/4. We are working hard continuously to get this to work perfectly and to beautify source code using best practices/concepts of Flow/Neos. Stay tuned!
 
 Quick start
 -----------
 
-* include the plugin's TypoScript definitions to your own one's (located in, for example,Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2) with:
-
-```
-include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/NodeTypes.ts2
-```
-
 * include the plugin's Stylesheet to your own one's where you add other stylesheets of the site.
 
 ```
-<link href="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/Stylesheets/multicontent.css')}" rel="stylesheet" media="screen">
+<link href="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/Styles/Multicontent.css')}" rel="stylesheet" media="screen">
 ```
 
 * add the plugin content element "Lelesys MultiContent" to the position of your choice.
 
-Steps to add tab structure
+
+
+STEPS TO ADD TAB STRUCTURE INTO YOUR OWN SITE
 ------------
 
 * include the plugin's TypoScript definitions to your own one's (located in, for example, Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2) with:
@@ -34,18 +30,19 @@ include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/Node
 * include the plugin's Stylesheet to your own one's where you add other stylesheets of the site.
 
 ```
-<link href="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/Stylesheets/multicontent.css')}" rel="stylesheet" media="screen">
+<link href="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/Styles/Multicontent.css')}" rel="stylesheet" media="screen">
 ```
 
 * include the plugin's Javascript to your own one's where you add other javascript files of the site.
 
 ```<script src="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/JavaScript/MultiContent.js')}"></script>```
+```<script src="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/Library/bootstrap-tab.js')}"></script>```
 
 * add the plugin content element "Lelesys Tab Structure" to the position of your choice and inside that
 plugin add as many "Lelesys Tab Item" plugin as you want with "Text", "Image", "Text with Image" or any
 other content elements.
 
-Steps to add toogle structure into your own site
+STEPS TO ADD TOGGLE STRUCTURE INTO YOUR OWN SITE
 ------------------------------------------------
 
 * include the plugin's TypoScript definitions to your own one's (located in, for example, Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2) with:
@@ -59,7 +56,7 @@ include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/Node
 * add the plugin content element "Lelesys Toggle Structure" to the position of your choice and inside that
 plugin add another plugin "Lelesys Toggle Item" and enter title and text in respected positions.
 
-Steps to add slider structure into your own site
+STEPS TO ADD sLIDER/CAROUSEL STRUCTURE INTO YOUR OWN SITE
 ------------------------------------------------
 
 * include the plugin's TypoScript definitions to your own one's (located in, for example, Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2) with:
@@ -71,7 +68,7 @@ include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/Node
 * include the plugin's Stylesheets to your own one's where you add other stylesheets of the site.
 
 ```
-<link href="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/Stylesheets/multicontent.css')}" rel="stylesheet" media="screen">
+<link href="{f:uri.resource(path: 'resource://Lelesys.Plugin.MultiContent/Public/Styles/Multicontent.css')}" rel="stylesheet" media="screen">
 ```
 
 * include the plugin's Javascript to your own one's where you add other javascript files of the site.

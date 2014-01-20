@@ -1,4 +1,4 @@
-include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/TypoScriptObjects.ts2
+include: resource://Lelesys.Plugin.MultiContent/Private/TypoScript/Library/TypoScriptObjects.ts2
 
 # Override Neos multi-column structure with Twitter bootstrap based grid columns
 prototype(TYPO3.Neos.NodeTypes:MultiColumn) {
@@ -13,7 +13,7 @@ prototype(TYPO3.Neos.NodeTypes:MultiColumnItem) {
 	columnSpan = Lelesys.Plugin.MultiContent:GridCalculator
 }
 
-prototype(Lelesys.Plugin.MultiContent:Tab) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:Tab) < prototype(TYPO3.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Tab) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/TabStructure.html'
 
@@ -26,7 +26,7 @@ prototype(Lelesys.Plugin.MultiContent:Tab) {
 	}
 }
 
-prototype(Lelesys.Plugin.MultiContent:TabItem) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:TabItem) < prototype(TYPO3.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:TabItem) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/TabItem.html'
 
@@ -37,7 +37,7 @@ prototype(Lelesys.Plugin.MultiContent:TabItem) {
 	title = ${q(node).property('title')}
 }
 
-prototype(Lelesys.Plugin.MultiContent:Accordion) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:Accordion) < prototype(TYPO3.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Accordion) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Accordion.html'
 
@@ -47,7 +47,7 @@ prototype(Lelesys.Plugin.MultiContent:Accordion) {
 	}
 }
 
-prototype(Lelesys.Plugin.MultiContent:AccordionItem) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:AccordionItem) < prototype(TYPO3.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:AccordionItem) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/AccordionItem.html'
 	title = ${q(node).property('title')}
@@ -58,7 +58,7 @@ prototype(Lelesys.Plugin.MultiContent:AccordionItem) {
 }
 
 
-prototype(Lelesys.Plugin.MultiContent:Carousel) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:Carousel) < prototype(TYPO3.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Carousel) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Carousel.html'
 	carouselItemsCollection = ${q(node).children('items').children('[instanceof Lelesys.Plugin.MultiContent:CarouselItem]')}
@@ -69,7 +69,7 @@ prototype(Lelesys.Plugin.MultiContent:Carousel) {
 	interval = ${q(node).property('interval')}
 }
 
-prototype(Lelesys.Plugin.MultiContent:CarouselItem) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:CarouselItem) < prototype(TYPO3.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:CarouselItem) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/CarouselItem.html'
 
@@ -80,17 +80,17 @@ prototype(Lelesys.Plugin.MultiContent:CarouselItem) {
 	caption = ${q(node).property('caption')}
 }
 
-prototype(Lelesys.Plugin.MultiContent:HorizontalRule) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:HorizontalRule) < prototype(TYPO3.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:HorizontalRule) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/HorizontalRule.html'
 }
 
-prototype(Lelesys.Plugin.MultiContent:Spacer) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:Spacer) < prototype(TYPO3.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Spacer) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Spacer.html'
 }
 
-prototype(Lelesys.Plugin.MultiContent:Well) < prototype(TYPO3.Neos:Template)
+prototype(Lelesys.Plugin.MultiContent:Well) < prototype(TYPO3.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Well) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Well.html'
 	contentContainer = TYPO3.Neos:ContentCollection

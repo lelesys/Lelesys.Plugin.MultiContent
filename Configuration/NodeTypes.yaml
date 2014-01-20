@@ -2,7 +2,7 @@
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:
-    group: Structure
+    group: structure
     label: 'Tab Container'
     icon: 'icon-list'
     inlineEditable: TRUE
@@ -15,7 +15,7 @@
     - 'TYPO3.Neos:Content'
   ui:
     label: 'Tab Item'
-    group: Structure
+    group: structure
     icon: 'icon-plus-sign'
     inlineEditable: TRUE
     inspector:
@@ -41,7 +41,7 @@
     - 'TYPO3.Neos:Content'
   ui:
     label: 'Accordion Container'
-    group: Structure
+    group: structure
     icon: 'icon-list'
     inlineEditable: TRUE
   childNodes:
@@ -53,7 +53,7 @@
     - 'TYPO3.Neos:Content'
   ui:
     label: 'Accordion Item'
-    group: Structure
+    group: structure
     icon: 'icon-plus-sign'
     inlineEditable: TRUE
   childNodes:
@@ -71,7 +71,7 @@
   superTypes:
     - 'TYPO3.Neos:Content'
   ui:
-    group: Structure
+    group: structure
     label: 'Carousel Container'
     icon: 'icon-list'
     inlineEditable: TRUE
@@ -98,7 +98,7 @@
     - 'TYPO3.Neos:Content'
   ui:
     label: 'Carousel Item'
-    group: Structure
+    group: structure
     icon: 'icon-plus-sign'
     inlineEditable: TRUE
   childNodes:
@@ -117,7 +117,7 @@
     - 'TYPO3.Neos:Content'
   ui:
     label: 'Horizontal rule'
-    group: Structure
+    group: structure
     icon: 'icon-resize-horizontal'
 
 'Lelesys.Plugin.MultiContent:Spacer':
@@ -125,7 +125,7 @@
     - 'TYPO3.Neos:Content'
   ui:
     label: 'Spacer'
-    group: Structure
+    group: structure
     icon: 'icon-resize-vertical'
 
 'Lelesys.Plugin.MultiContent:Well':
@@ -133,14 +133,13 @@
     - 'TYPO3.Neos:Content'
   ui:
     label: 'Well'
-    group: Structure
+    group: structure
     icon: 'icon-edit'
     inlineEditable: TRUE
     inspector:
       groups:
         wellConfiguration:
           label: 'Well cofiguration'
-          priority: 2
   childNodes:
     content:
       type: 'TYPO3.Neos:ContentCollection'
@@ -167,7 +166,7 @@
     - 'TYPO3.Neos.NodeTypes:Text'
   ui:
     label: 'Hero unit'
-    group: Structure
+    group: structure
     icon: 'icon-font'
     inlineEditable: TRUE
   properties:
@@ -184,7 +183,7 @@
     - 'TYPO3.Neos.NodeTypes:Text'
   ui:
     label: 'Team Member'
-    group: Structure
+    group: structure
     icon: 'icon-user'
   properties:
     title:

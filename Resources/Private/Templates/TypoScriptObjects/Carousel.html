@@ -1,10 +1,8 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
 {namespace neos=TYPO3\Neos\ViewHelpers}
-<f:security.ifAccess resource="TYPO3_Neos_Backend_BackendController">
+<f:security.ifAccess resource="TYPO3_Neos_Backend_GeneralAccess">
 	<f:then>
-		<neos:contentElement node="{node}">
-			<ts:render path="carouselItems" />
-		</neos:contentElement>
+		{carouselItems -> f:format.raw()}
 	</f:then>
 	<f:else>
 		<div id="carousel-{node.name}" class="carousel slide">
@@ -17,7 +15,7 @@
 			</f:if>
 			<!-- Carousel items -->
 			<div class="carousel-inner">
-				<ts:render path="carouselItems" />
+				{carouselItems -> f:format.raw()}
 			</div>
 			<!-- Carousel nav -->
 			<a class="carousel-control left" href="#carousel-{node.name}" data-slide="prev">&lsaquo;</a>
@@ -26,8 +24,8 @@
 		<!-- FIXME
 		<script type="text/javascript">
 			$('#carousel-{node.name}').carousel({
-  				interval: "{interval}"
-	  		});
+				interval: "{interval}"
+			});
 		</script> -->
 	</f:else>
 </f:security.ifAccess>

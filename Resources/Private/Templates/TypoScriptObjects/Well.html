@@ -1,7 +1,5 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
 {namespace neos=TYPO3\Neos\ViewHelpers}
-<neos:contentElement node="{node}">
-	<div class="well well-{size}">
-		<ts:render path="contentContainer" />
-	</div>
-</neos:contentElement>
+<div class="well well-{size}">
+	{contentContainer -> f:format.raw()}
+</div>
