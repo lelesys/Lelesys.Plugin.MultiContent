@@ -21,11 +21,6 @@ Quick start
 STEPS TO ADD TAB STRUCTURE INTO YOUR OWN SITE
 ------------
 
-* include the plugin's TypoScript definitions to your own one's (located in, for example, Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2) with:
-
-```
-include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/NodeTypes.ts2
-```
 
 * include the plugin's Stylesheet to your own one's where you add other stylesheets of the site.
 
@@ -45,12 +40,6 @@ other content elements.
 STEPS TO ADD TOGGLE STRUCTURE INTO YOUR OWN SITE
 ------------------------------------------------
 
-* include the plugin's TypoScript definitions to your own one's (located in, for example, Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2) with:
-
-```
-include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/NodeTypes.ts2
-```
-
 * Js and Css is base on twitter bootstrap, so need to include twitter bootstrap css and js.
 
 * add the plugin content element "Lelesys Toggle Structure" to the position of your choice and inside that
@@ -58,12 +47,6 @@ plugin add another plugin "Lelesys Toggle Item" and enter title and text in resp
 
 STEPS TO ADD sLIDER/CAROUSEL STRUCTURE INTO YOUR OWN SITE
 ------------------------------------------------
-
-* include the plugin's TypoScript definitions to your own one's (located in, for example, Packages/Sites/Your.Site/Resources/Private/TypoScripts/Library/ContentElements.ts2) with:
-
-```
-include: resource://Lelesys.Plugin.MultiContent/Private/TypoScripts/Library/NodeTypes.ts2
-```
 
 * include the plugin's Stylesheets to your own one's where you add other stylesheets of the site.
 
