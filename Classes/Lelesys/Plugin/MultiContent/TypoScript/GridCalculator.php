@@ -25,7 +25,7 @@ class GridCalculator extends \TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScr
 		$context = $this->tsRuntime->getCurrentContext();
 		$node = $context['node'];
 		$layoutPieces = explode('-', $node->getParent()->getProperty('layout'));
-		$columnSpan = ceil(0.12 * $layoutPieces[$context['columnIterator']['index']]);
+		$columnSpan = ceil(0.12 * $layoutPieces[$context['multiColumnIteration']['index']]);
 		return $columnSpan;
 	}
 }
