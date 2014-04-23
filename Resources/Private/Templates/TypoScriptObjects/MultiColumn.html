@@ -1,7 +1,4 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
-{namespace neos=TYPO3\Neos\ViewHelpers}
-<div class="row-fluid">
-	<div class="span12">
-		{columns -> f:format.raw()}
-	</div>
+<div{attributes -> f:format.raw()}>
+	<ts:render path="columns" />
 </div>

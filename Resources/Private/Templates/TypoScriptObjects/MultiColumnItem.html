@@ -1,4 +1,4 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
-<div class="span{ts:render(path: 'columnSpan')}">
-	{columnContent -> f:format.raw()}
+<div{attributes -> f:format.raw()}>
+	<ts:render path="columnContent" />
 </div>
