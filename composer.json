@@ -11,6 +11,7 @@
 		}
 	],
 	"require": {
+		"typo3/neos-nodetypes": "dev-master",
 		"typo3/neos": "dev-master"
 	},
 	"autoload": {
