@@ -1,6 +1,6 @@
 'Lelesys.Plugin.MultiContent:Tab':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    'TYPO3.Neos:Content': TRUE
   ui:
     group: structure
     label: 'Tab Container'
@@ -12,7 +12,7 @@
 
 'Lelesys.Plugin.MultiContent:TabItem':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    'TYPO3.Neos:Content': TRUE
   ui:
     label: 'Tab Item'
     group: structure
@@ -38,7 +38,7 @@
 
 'Lelesys.Plugin.MultiContent:Accordion':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    'TYPO3.Neos:Content': TRUE
   ui:
     label: 'Accordion Container'
     group: structure
@@ -50,7 +50,7 @@
 
 'Lelesys.Plugin.MultiContent:AccordionItem':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    'TYPO3.Neos:Content': TRUE
   ui:
     label: 'Accordion Item'
     group: structure
@@ -69,7 +69,7 @@
 
 'Lelesys.Plugin.MultiContent:Carousel':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    'TYPO3.Neos:Content': TRUE
   ui:
     group: structure
     label: 'Carousel Container'
@@ -95,7 +95,7 @@
 
 'Lelesys.Plugin.MultiContent:CarouselItem':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    'TYPO3.Neos:Content': TRUE
   ui:
     label: 'Carousel Item'
     group: structure
@@ -108,13 +108,14 @@
     caption:
       type: string
       translatable: TRUE
-      defaultValue: 'Enter caption here'
       ui:
         inlineEditable: TRUE
+        aloha:
+          placeholder: '<p>Enter Caption Here</p>'
 
 'Lelesys.Plugin.MultiContent:HorizontalRule':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    'TYPO3.Neos:Content': TRUE
   ui:
     label: 'Horizontal rule'
     group: structure
@@ -122,7 +123,7 @@
 
 'Lelesys.Plugin.MultiContent:Spacer':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    'TYPO3.Neos:Content': TRUE
   ui:
     label: 'Spacer'
     group: structure
@@ -130,7 +131,7 @@
 
 'Lelesys.Plugin.MultiContent:Well':
   superTypes:
-    - 'TYPO3.Neos:Content'
+    'TYPO3.Neos:Content': TRUE
   ui:
     label: 'Well'
     group: structure
@@ -163,7 +164,7 @@
 
 'Lelesys.Plugin.MultiContent:HeroUnit':
   superTypes:
-    - 'TYPO3.Neos.NodeTypes:Text'
+    'TYPO3.Neos.NodeTypes:Text': TRUE
   ui:
     label: 'Hero unit'
     group: structure
@@ -179,8 +180,8 @@
 
 'Lelesys.Plugin.MultiContent:TeamMember':
   superTypes:
-    - 'TYPO3.Neos.NodeTypes:Image'
-    - 'TYPO3.Neos.NodeTypes:Text'
+    'TYPO3.Neos.NodeTypes:Image': TRUE
+    'TYPO3.Neos.NodeTypes:Text': TRUE
   ui:
     label: 'Team Member'
     group: structure
