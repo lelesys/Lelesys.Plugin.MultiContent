@@ -11,8 +11,8 @@
 		}
 	],
 	"require": {
-		"typo3/neos-nodetypes": "dev-master",
-		"typo3/neos": "dev-master"
+		"typo3/neos-nodetypes": "2.3.x-dev",
+		"typo3/neos": "2.3.x-dev"
 	},
 	"autoload": {
 		"psr-0": {
