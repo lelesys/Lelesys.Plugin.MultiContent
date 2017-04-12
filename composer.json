@@ -11,8 +11,8 @@
 		}
 	],
 	"require": {
-		"typo3/neos-nodetypes": "2.1.*",
-		"typo3/neos": "2.1.*"
+		"typo3/neos-nodetypes": "~2.2.0",
+		"typo3/neos": "~2.2.0"
 	},
 	"autoload": {
 		"psr-0": {
