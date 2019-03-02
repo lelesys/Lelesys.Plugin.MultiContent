@@ -164,7 +164,7 @@
 
 'Lelesys.Plugin.MultiContent:HeroUnit':
   superTypes:
-    'TYPO3.Neos.NodeTypes:Text': TRUE
+    'Neos.NodeTypes:Text': TRUE
   ui:
     label: 'Hero unit'
     group: structure
@@ -180,8 +180,8 @@
 
 'Lelesys.Plugin.MultiContent:TeamMember':
   superTypes:
-    'TYPO3.Neos.NodeTypes:Image': TRUE
-    'TYPO3.Neos.NodeTypes:Text': TRUE
+    'Neos.NodeTypes:Image': TRUE
+    'Neos.NodeTypes:Text': TRUE
   ui:
     label: 'Team Member'
     group: structure
