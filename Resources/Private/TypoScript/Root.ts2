@@ -1,14 +1,14 @@
 include: resource://Lelesys.Plugin.MultiContent/Private/TypoScript/Library/TypoScriptObjects.ts2
 
 # Override Neos multi-column structure with Twitter bootstrap based grid columns
-prototype(TYPO3.Neos.NodeTypes:MultiColumn) {
+prototype(Neos.NodeTypes:MultiColumn) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/MultiColumn.html'
 	# this is used in GridCalculator
 	attributes.class = 'row'
 	columns.iterationName = 'multiColumnIteration'
 }
 
-prototype(TYPO3.Neos.NodeTypes:MultiColumnItem) {
+prototype(Neos.NodeTypes:MultiColumnItem) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/MultiColumnItem.html'
 	# this use used in GridCalculator
 	attributes.class = ${'col-sm-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
@@ -101,13 +101,13 @@ prototype(Lelesys.Plugin.MultiContent:Well) {
 	size = ${q(node).property('size')}
 }
 
-prototype(Lelesys.Plugin.MultiContent:HeroUnit) < prototype(TYPO3.Neos.NodeTypes:Text)
+prototype(Lelesys.Plugin.MultiContent:HeroUnit) < prototype(Neos.NodeTypes:Text)
 prototype(Lelesys.Plugin.MultiContent:HeroUnit) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/HeroUnit.html'
 	title = ${q(node).property('title')}
 }
 
-prototype(Lelesys.Plugin.MultiContent:TeamMember) < prototype(TYPO3.Neos.NodeTypes:Image)
+prototype(Lelesys.Plugin.MultiContent:TeamMember) < prototype(Neos.NodeTypes:Image)
 prototype(Lelesys.Plugin.MultiContent:TeamMember) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/TeamMember.html'
 	title = ${q(node).property('title')}
