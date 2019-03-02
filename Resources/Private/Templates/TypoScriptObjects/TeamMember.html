@@ -1,12 +1,12 @@
 {namespace ts=TYPO3\TypoScript\ViewHelpers}
-{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace neos=Neos\Neos\ViewHelpers}
 <div class="thumbnail">
 	<f:if condition="{image}">
 		<f:then>
 			<img src="{f:uri.resource(resource: image.resource)}" alt="{title}"/>
 		</f:then>
 		<f:else>
-			<img src="{f:uri.resource(package:'TYPO3.Neos', path:'Images/dummy-image.png')}" title="Dummy Image" />
+			<img src="{f:uri.resource(package:'Neos.Neos', path:'Images/dummy-image.png')}" title="Dummy Image" />
 		</f:else>
 	</f:if>
 	<div class="caption">
