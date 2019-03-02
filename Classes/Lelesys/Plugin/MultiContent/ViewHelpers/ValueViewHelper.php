@@ -13,7 +13,7 @@ namespace Lelesys\Plugin\MultiContent\ViewHelpers;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\ContentRepository\Domain\Model\NodeInterface;
-use TYPO3\Fluid\Core\ViewHelper\AbstractViewHelper;
+use Neos\FluidAdaptor\Core\ViewHelper\AbstractViewHelper;
 
 /**
  * Node property value for current locale
