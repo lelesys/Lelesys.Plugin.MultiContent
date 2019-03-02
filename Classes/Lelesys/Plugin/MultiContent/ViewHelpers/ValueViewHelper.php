@@ -12,7 +12,7 @@ namespace Lelesys\Plugin\MultiContent\ViewHelpers;
  *                                                                        */
 
 use Neos\Flow\Annotations as Flow;
-use TYPO3\TYPO3CR\Domain\Model\NodeInterface;
+use Neos\ContentRepository\Domain\Model\NodeInterface;
 use TYPO3\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
@@ -25,7 +25,7 @@ class ValueViewHelper extends AbstractViewHelper {
 	/**
 	 * Returns the node property value for current locale
 	 *
-	 * @param TYPO3\TYPO3CR\Domain\Model\NodeInterface $node The node
+	 * @param Neos\ContentRepository\Domain\Model\NodeInterface $node The node
 	 * @param strind $property The node property
 	 * @param string $locale The locale
 	 */
