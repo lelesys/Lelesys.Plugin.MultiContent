@@ -1,23 +1,23 @@
+
 'Lelesys.Plugin.MultiContent:Tab':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
     group: structure
     label: 'Tab Container'
-    icon: 'icon-list'
-    inlineEditable: TRUE
+    icon: icon-list
+    inlineEditable: true
   childNodes:
     items:
       type: 'Neos.Neos:ContentCollection'
-
 'Lelesys.Plugin.MultiContent:TabItem':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
     label: 'Tab Item'
     group: structure
-    icon: 'icon-plus-sign'
-    inlineEditable: TRUE
+    icon: icon-plus-sign
+    inlineEditable: true
     inspector:
       groups:
         tabItem:
@@ -29,52 +29,49 @@
   properties:
     title:
       type: string
-      translatable: TRUE
+      translatable: true
       ui:
         label: 'Tab Title'
-        reloadIfChanged: TRUE
+        reloadIfChanged: true
         inspector:
           group: tabItem
-
 'Lelesys.Plugin.MultiContent:Accordion':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
     label: 'Accordion Container'
     group: structure
-    icon: 'icon-list'
-    inlineEditable: TRUE
+    icon: icon-list
+    inlineEditable: true
   childNodes:
     items:
       type: 'Neos.Neos:ContentCollection'
-
 'Lelesys.Plugin.MultiContent:AccordionItem':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
     label: 'Accordion Item'
     group: structure
-    icon: 'icon-plus-sign'
-    inlineEditable: TRUE
+    icon: icon-plus-sign
+    inlineEditable: true
   childNodes:
     content:
       type: 'Neos.Neos:ContentCollection'
   properties:
     title:
       type: string
-      translatable: TRUE
+      translatable: true
       defaultValue: 'Enter title here'
       ui:
-        inlineEditable: TRUE
-
+        inlineEditable: true
 'Lelesys.Plugin.MultiContent:Carousel':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
     group: structure
     label: 'Carousel Container'
-    icon: 'icon-list'
-    inlineEditable: TRUE
+    icon: icon-list
+    inlineEditable: true
     inspector:
       groups:
         carouselConfiguration:
@@ -86,57 +83,53 @@
   properties:
     interval:
       type: boolean
-      defaultValue: FALSE
+      defaultValue: false
       ui:
         label: 'Auto slide'
         inspector:
           group: carouselConfiguration
-
-
 'Lelesys.Plugin.MultiContent:CarouselItem':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
     label: 'Carousel Item'
     group: structure
-    icon: 'icon-plus-sign'
-    inlineEditable: TRUE
+    icon: icon-plus-sign
+    inlineEditable: true
   childNodes:
     content:
       type: 'Neos.Neos:ContentCollection'
   properties:
     caption:
       type: string
-      translatable: TRUE
+      translatable: true
       ui:
-        inlineEditable: TRUE
-        aloha:
-          placeholder: '<p>Enter Caption Here</p>'
-
+        inlineEditable: true
+        inline:
+          editorOptions:
+            placeholder: '<p>Enter Caption Here</p>'
 'Lelesys.Plugin.MultiContent:HorizontalRule':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
     label: 'Horizontal rule'
     group: structure
-    icon: 'icon-resize-horizontal'
-
+    icon: icon-resize-horizontal
 'Lelesys.Plugin.MultiContent:Spacer':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
-    label: 'Spacer'
+    label: Spacer
     group: structure
-    icon: 'icon-resize-vertical'
-
+    icon: icon-resize-vertical
 'Lelesys.Plugin.MultiContent:Well':
   superTypes:
-    'Neos.Neos:Content': TRUE
+    'Neos.Neos:Content': true
   ui:
-    label: 'Well'
+    label: Well
     group: structure
-    icon: 'icon-edit'
-    inlineEditable: TRUE
+    icon: icon-edit
+    inlineEditable: true
     inspector:
       groups:
         wellConfiguration:
@@ -147,55 +140,53 @@
   properties:
     size:
       type: string
-      defaultValue: 'large'
+      defaultValue: large
       ui:
-        label: 'Size'
-        reloadIfChanged: TRUE
+        label: Size
+        reloadIfChanged: true
         inspector:
-          group: 'wellConfiguration'
+          group: wellConfiguration
           editor: Content/Inspector/Editors/SelectBoxEditor
           editorOptions:
-            placeholder: 'Default'
+            placeholder: Default
             values:
               large:
-                label: 'Large'
+                label: Large
               small:
-                label: 'Small'
-
+                label: Small
 'Lelesys.Plugin.MultiContent:HeroUnit':
   superTypes:
-    'Neos.NodeTypes:Text': TRUE
+    'Neos.NodeTypes:Text': true
   ui:
     label: 'Hero unit'
     group: structure
-    icon: 'icon-font'
-    inlineEditable: TRUE
+    icon: icon-font
+    inlineEditable: true
   properties:
     title:
       type: string
-      translatable: TRUE
+      translatable: true
       defaultValue: 'Enter title here'
       ui:
-        inlineEditable: TRUE
-
+        inlineEditable: true
 'Lelesys.Plugin.MultiContent:TeamMember':
   superTypes:
-    'Neos.NodeTypes:Image': TRUE
-    'Neos.NodeTypes:Text': TRUE
+    'Neos.NodeTypes:Image': true
+    'Neos.NodeTypes:Text': true
   ui:
     label: 'Team Member'
     group: structure
-    icon: 'icon-user'
+    icon: icon-user
   properties:
     title:
       type: string
-      translatable: TRUE
+      translatable: true
       defaultValue: 'Enter title here'
       ui:
-        inlineEditable: TRUE
+        inlineEditable: true
     description:
       type: string
-      translatable: TRUE
+      translatable: true
       defaultValue: 'Enter description here'
       ui:
-        inlineEditable: TRUE
+        inlineEditable: true
