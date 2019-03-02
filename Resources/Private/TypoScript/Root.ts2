@@ -14,87 +14,87 @@ prototype(Neos.NodeTypes:MultiColumnItem) {
 	attributes.class = ${'col-sm-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
 }
 
-prototype(Lelesys.Plugin.MultiContent:Tab) < prototype(TYPO3.Neos:Content)
+prototype(Lelesys.Plugin.MultiContent:Tab) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Tab) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/TabStructure.html'
 
 	# this collection is only used to render the tab navigation elements
 	tabItemCollection = ${q(node).children('items').children('[instanceof Lelesys.Plugin.MultiContent:TabItem]')}
 
-	tabs = TYPO3.Neos:ContentCollection
+	tabs = Neos.Neos:ContentCollection
 	tabs {
 		nodePath = 'items'
 	}
 }
 
-prototype(Lelesys.Plugin.MultiContent:TabItem) < prototype(TYPO3.Neos:Content)
+prototype(Lelesys.Plugin.MultiContent:TabItem) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:TabItem) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/TabItem.html'
 
-	contentContainer = TYPO3.Neos:ContentCollection
+	contentContainer = Neos.Neos:ContentCollection
 	contentContainer {
 		nodePath = 'content'
 	}
 	title = ${q(node).property('title')}
 }
 
-prototype(Lelesys.Plugin.MultiContent:Accordion) < prototype(TYPO3.Neos:Content)
+prototype(Lelesys.Plugin.MultiContent:Accordion) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Accordion) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Accordion.html'
 
-	accordionItems = TYPO3.Neos:ContentCollection
+	accordionItems = Neos.Neos:ContentCollection
 	accordionItems {
 		nodePath = 'items'
 	}
 }
 
-prototype(Lelesys.Plugin.MultiContent:AccordionItem) < prototype(TYPO3.Neos:Content)
+prototype(Lelesys.Plugin.MultiContent:AccordionItem) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:AccordionItem) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/AccordionItem.html'
 	title = ${q(node).property('title')}
-	contentContainer = TYPO3.Neos:ContentCollection
+	contentContainer = Neos.Neos:ContentCollection
 	contentContainer {
 		nodePath = 'content'
 	}
 }
 
 
-prototype(Lelesys.Plugin.MultiContent:Carousel) < prototype(TYPO3.Neos:Content)
+prototype(Lelesys.Plugin.MultiContent:Carousel) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Carousel) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Carousel.html'
 	carouselItemsCollection = ${q(node).children('items').children('[instanceof Lelesys.Plugin.MultiContent:CarouselItem]')}
-	carouselItems = TYPO3.Neos:ContentCollection
+	carouselItems = Neos.Neos:ContentCollection
 	carouselItems {
 		nodePath = 'items'
 	}
 	interval = ${q(node).property('interval')}
 }
 
-prototype(Lelesys.Plugin.MultiContent:CarouselItem) < prototype(TYPO3.Neos:Content)
+prototype(Lelesys.Plugin.MultiContent:CarouselItem) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:CarouselItem) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/CarouselItem.html'
 
-	contentContainer = TYPO3.Neos:ContentCollection
+	contentContainer = Neos.Neos:ContentCollection
 	contentContainer {
 		nodePath = 'content'
 	}
 	caption = ${q(node).property('caption')}
 }
 
-prototype(Lelesys.Plugin.MultiContent:HorizontalRule) < prototype(TYPO3.Neos:Content)
+prototype(Lelesys.Plugin.MultiContent:HorizontalRule) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:HorizontalRule) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/HorizontalRule.html'
 }
 
-prototype(Lelesys.Plugin.MultiContent:Spacer) < prototype(TYPO3.Neos:Content)
+prototype(Lelesys.Plugin.MultiContent:Spacer) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Spacer) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Spacer.html'
 }
 
-prototype(Lelesys.Plugin.MultiContent:Well) < prototype(TYPO3.Neos:Content)
+prototype(Lelesys.Plugin.MultiContent:Well) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Well) {
 	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Well.html'
-	contentContainer = TYPO3.Neos:ContentCollection
+	contentContainer = Neos.Neos:ContentCollection
 	contentContainer {
 		nodePath = 'content'
 	}
