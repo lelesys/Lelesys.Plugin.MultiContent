@@ -10,7 +10,7 @@ namespace Lelesys\Plugin\MultiContent\TypoScript;
  * of the License, or (at your option) any later version.                       *
  *                                                                              */
 
-use TYPO3\Flow\Annotations as Flow;
+use Neos\Flow\Annotations as Flow;
 
 /**
  * A TypoScript object which calculates column span based on the layout property of
