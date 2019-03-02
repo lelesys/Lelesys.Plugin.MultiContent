@@ -1,4 +1,4 @@
-include: resource://Lelesys.Plugin.MultiContent/Private/TypoScript/Library/TypoScriptObjects.ts2
+include: resource://Lelesys.Plugin.MultiContent/Private/Fusion/Library/TypoScriptObjects.ts2
 
 # Override Neos multi-column structure with Twitter bootstrap based grid columns
 prototype(Neos.NodeTypes:MultiColumn) {
