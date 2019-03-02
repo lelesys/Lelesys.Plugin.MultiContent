@@ -2,7 +2,7 @@
 	"name": "lelesys/plugin-multi-content",
 	"description": "MultiContent plugin for displaying content in different pleasant layouts.",
 	"license": "LGPL-3.0+",
-	"type": "typo3-flow-plugin",
+	"type": "neos-plugin",
 	"authors": [
 		{
 			"name": "Lelesys Infotech Pvt Ltd, India",
@@ -11,8 +11,8 @@
 		}
 	],
 	"require": {
-		"typo3/neos-nodetypes": "dev-master",
-		"typo3/neos": "dev-master"
+		"neos/neos": "^4.0",
+		"neos/nodetypes": "^4.0",
 	},
 	"autoload": {
 		"psr-0": {
