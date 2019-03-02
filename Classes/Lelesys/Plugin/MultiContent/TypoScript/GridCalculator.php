@@ -16,7 +16,7 @@ use Neos\Flow\Annotations as Flow;
  * A TypoScript object which calculates column span based on the layout property of
  * the parent MultiColumn structure
  */
-class GridCalculator extends \TYPO3\TypoScript\TypoScriptObjects\AbstractTypoScriptObject {
+class GridCalculator extends \Neos\Fusion\TypoScriptObjects\AbstractTypoScriptObject {
 
 	/**
 	 * @return mixed|void
