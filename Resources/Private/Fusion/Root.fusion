@@ -1,22 +1,22 @@
-include: resource://Lelesys.Plugin.MultiContent/Private/Fusion/Library/TypoScriptObjects.ts2
+include: resource://Lelesys.Plugin.MultiContent/Private/Fusion/Library/FusionObjects.fusion
 
 # Override Neos multi-column structure with Twitter bootstrap based grid columns
 prototype(Neos.NodeTypes:MultiColumn) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/MultiColumn.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/MultiColumn.html'
 	# this is used in GridCalculator
 	attributes.class = 'row'
 	columns.iterationName = 'multiColumnIteration'
 }
 
 prototype(Neos.NodeTypes:MultiColumnItem) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/MultiColumnItem.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/MultiColumnItem.html'
 	# this use used in GridCalculator
 	attributes.class = ${'col-sm-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index]}
 }
 
 prototype(Lelesys.Plugin.MultiContent:Tab) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Tab) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/TabStructure.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/TabStructure.html'
 
 	# this collection is only used to render the tab navigation elements
 	tabItemCollection = ${q(node).children('items').children('[instanceof Lelesys.Plugin.MultiContent:TabItem]')}
@@ -29,7 +29,7 @@ prototype(Lelesys.Plugin.MultiContent:Tab) {
 
 prototype(Lelesys.Plugin.MultiContent:TabItem) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:TabItem) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/TabItem.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/TabItem.html'
 
 	contentContainer = Neos.Neos:ContentCollection
 	contentContainer {
@@ -40,7 +40,7 @@ prototype(Lelesys.Plugin.MultiContent:TabItem) {
 
 prototype(Lelesys.Plugin.MultiContent:Accordion) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Accordion) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Accordion.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/Accordion.html'
 
 	accordionItems = Neos.Neos:ContentCollection
 	accordionItems {
@@ -50,7 +50,7 @@ prototype(Lelesys.Plugin.MultiContent:Accordion) {
 
 prototype(Lelesys.Plugin.MultiContent:AccordionItem) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:AccordionItem) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/AccordionItem.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/AccordionItem.html'
 	title = ${q(node).property('title')}
 	contentContainer = Neos.Neos:ContentCollection
 	contentContainer {
@@ -61,7 +61,7 @@ prototype(Lelesys.Plugin.MultiContent:AccordionItem) {
 
 prototype(Lelesys.Plugin.MultiContent:Carousel) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Carousel) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Carousel.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/Carousel.html'
 	carouselItemsCollection = ${q(node).children('items').children('[instanceof Lelesys.Plugin.MultiContent:CarouselItem]')}
 	carouselItems = Neos.Neos:ContentCollection
 	carouselItems {
@@ -72,7 +72,7 @@ prototype(Lelesys.Plugin.MultiContent:Carousel) {
 
 prototype(Lelesys.Plugin.MultiContent:CarouselItem) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:CarouselItem) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/CarouselItem.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/CarouselItem.html'
 
 	contentContainer = Neos.Neos:ContentCollection
 	contentContainer {
@@ -83,17 +83,17 @@ prototype(Lelesys.Plugin.MultiContent:CarouselItem) {
 
 prototype(Lelesys.Plugin.MultiContent:HorizontalRule) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:HorizontalRule) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/HorizontalRule.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/HorizontalRule.html'
 }
 
 prototype(Lelesys.Plugin.MultiContent:Spacer) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Spacer) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Spacer.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/Spacer.html'
 }
 
 prototype(Lelesys.Plugin.MultiContent:Well) < prototype(Neos.Neos:Content)
 prototype(Lelesys.Plugin.MultiContent:Well) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/Well.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/Well.html'
 	contentContainer = Neos.Neos:ContentCollection
 	contentContainer {
 		nodePath = 'content'
@@ -103,13 +103,13 @@ prototype(Lelesys.Plugin.MultiContent:Well) {
 
 prototype(Lelesys.Plugin.MultiContent:HeroUnit) < prototype(Neos.NodeTypes:Text)
 prototype(Lelesys.Plugin.MultiContent:HeroUnit) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/HeroUnit.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/HeroUnit.html'
 	title = ${q(node).property('title')}
 }
 
 prototype(Lelesys.Plugin.MultiContent:TeamMember) < prototype(Neos.NodeTypes:Image)
 prototype(Lelesys.Plugin.MultiContent:TeamMember) {
-	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/TypoScriptObjects/TeamMember.html'
+	templatePath = 'resource://Lelesys.Plugin.MultiContent/Private/Templates/FusionObjects/TeamMember.html'
 	title = ${q(node).property('title')}
 	description = ${q(node).property('description')}
 }

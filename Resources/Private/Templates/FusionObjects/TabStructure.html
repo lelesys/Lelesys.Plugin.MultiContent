@@ -5,7 +5,7 @@
 	<f:then>
 		<ul class="nav nav-tabs" id="tabs-{node.name}">
 			<f:for each="{tabItemCollection}" as="tabItem" iteration="tabItemIterator">
-				<li{f:if(condition: tabItemIterator.isFirst, then: ' class="active"')}><a data-toggle="tab" href="#tab-{tabItem.name}">{multicontent:value(node: '{tabItem}', property: 'title')}</a></li>
+				<li{f:if(condition: tabItemIterator.isFirst, then: ' class="active"')}><a data-toggle="tab" href="#tab-{tabItem.name}">{tabItem.properties.title}</a></li>
 			</f:for>
 		</ul>
 	</f:then>

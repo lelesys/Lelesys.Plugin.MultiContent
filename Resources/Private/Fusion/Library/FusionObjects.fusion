@@ -1,4 +1,4 @@
-# This file contains custom TypoScriptObjects which are not NodeTypes
+# This file contains custom FusionObjects which are not NodeTypes
 
 # This object is used to calculate column span of a multi-column structure.
 # layout property of the parent MultiColumn container is read and then class for

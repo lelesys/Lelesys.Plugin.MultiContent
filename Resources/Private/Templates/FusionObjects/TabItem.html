@@ -1,6 +1,6 @@
 {namespace ts=Neos\Fusion\ViewHelpers}
 {namespace neos=Neos\Neos\ViewHelpers}
-<f:security.ifAccess privilegeTarget="Neos.Neos:Backend.GeneralAccess">
+<f:if condition="{neos:rendering.inBackend()}">
 	<f:then>
 		<div class="tab-pane" id="tab-{node.name}">
 			{contentContainer -> f:format.raw()}
@@ -11,4 +11,4 @@
 			{contentContainer -> f:format.raw()}
 		</div>
 	</f:else>
-</f:security.ifAccess>
+</f:if>

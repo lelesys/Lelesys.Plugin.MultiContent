@@ -1,6 +1,6 @@
 {namespace ts=Neos\Fusion\ViewHelpers}
 {namespace neos=Neos\Neos\ViewHelpers}
-<f:security.ifAccess privilegeTarget="Neos.Neos:Backend.GeneralAccess">
+<f:if condition="{neos:rendering.inBackend()}">
 	<f:then>
 		{carouselItems -> f:format.raw()}
 	</f:then>
@@ -28,4 +28,4 @@
 			});
 		</script> -->
 	</f:else>
-</f:security.ifAccess>
+</f:if>
