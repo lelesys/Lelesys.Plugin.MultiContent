@@ -18,11 +18,11 @@
 	<f:else>
 		<div class="accordion-group">
 			<div class="accordion-heading">
-				<a class="accordion-toggle" data-toggle="collapse" data-parent="#{node.parent.parent.name}" href="#accordion-{node.name}">
+				<a class="accordion-toggle" data-toggle="collapse" data-parent="#{node.parent.parent.identifier}" href="#accordion-{node.identifier}">
 					{title -> f:format.raw()}
 				</a>
 			</div>
-			<div id="accordion-{node.name}" class="accordion-body collapse">
+			<div id="accordion-{node.identifier}" class="accordion-body collapse">
 				<div class="accordion-inner">
 					{contentContainer -> f:format.raw()}
 				</div>

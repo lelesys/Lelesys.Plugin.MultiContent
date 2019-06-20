@@ -2,12 +2,12 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 <f:if condition="{neos:rendering.inBackend()}">
 	<f:then>
-		<div class="tab-pane" id="tab-{node.name}">
+		<div class="tab-pane" id="tab-{node.identifier}">
 			{contentContainer -> f:format.raw()}
 		</div>
 	</f:then>
 	<f:else>
-		<div class="tab-pane" id="tab-{node.name}">
+		<div class="tab-pane" id="tab-{node.identifier}">
 			{contentContainer -> f:format.raw()}
 		</div>
 	</f:else>
