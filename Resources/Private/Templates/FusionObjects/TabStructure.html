@@ -3,9 +3,9 @@
 {namespace multicontent=Lelesys\Plugin\MultiContent\ViewHelpers}
 <f:if condition="{tabItemCollection}">
 	<f:then>
-		<ul class="nav nav-tabs" id="tabs-{node.identifier}">
+		<ul class="nav nav-tabs" id="tabs-{node.identifier}" role="tablist">
 			<f:for each="{tabItemCollection}" as="tabItem" iteration="tabItemIterator">
-				<li{f:if(condition: tabItemIterator.isFirst, then: ' class="active"')}><a data-toggle="tab" href="#tab-{tabItem.identifier}">{tabItem.properties.title}</a></li>
+				<li class="nav-item flex-fill" role="presentation"><a class="{f:if(condition: tabItemIterator.isFirst, then: 'active')}" role="tab" aria-selected="true" data-bs-toggle="tab" data-bs-target="#tab-{tabItem.identifier}">{tabItem.properties.title}</a></li>
 			</f:for>
 		</ul>
 	</f:then>
